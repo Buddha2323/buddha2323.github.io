@@ -687,7 +687,7 @@ const select=(b,focus)=>{
   moveInd(b);if(focus)b.focus();
   const pn=$('#'+b.getAttribute('aria-controls'));
   if(window.gsap&&!reduce){
-    window.gsap.fromTo(pn.querySelectorAll('.pintro,.pc,.stop,.ql,.pubs li,h4'),{y:22,opacity:0},{y:0,opacity:1,duration:.5,stagger:.06,ease:'power3.out',overwrite:true});
+    window.gsap.fromTo(pn.querySelectorAll('.pintro,.pc,.stop,.ql,.pubs li,h4'),{opacity:0},{opacity:1,duration:.45,stagger:.05,ease:'power3.out',overwrite:true});
     if(pn.id==='p-edu'){window.gsap.fromTo(pn.querySelector('.road'),{'--rs':0},{'--rs':1,duration:1,ease:'power2.inOut'})}
   }
 };
@@ -715,10 +715,10 @@ if(window.gsap&&!reduce){
   if(window.ScrollTrigger){
     g.to('#cloth',{yPercent:12,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
     $$('.stats b[data-count]').forEach(b=>{const n=+b.dataset.count,o={v:0};g.to(o,{v:n,duration:1.4,ease:'power2.out',onUpdate:()=>b.textContent=Math.round(o.v),scrollTrigger:{trigger:b,start:'top 92%',once:true}})});
-    $$('.rv-group').forEach(grp=>g.from(grp.querySelectorAll('.rv'),{y:36,opacity:0,duration:.75,stagger:.1,ease:'power3.out',scrollTrigger:{trigger:grp,start:'top 88%',once:true}}));
-    $$('.rv-solo').forEach(el=>g.from(el,{y:24,opacity:0,duration:.6,scrollTrigger:{trigger:el,start:'top 90%',once:true}}));
-    $$('.thesis.rv').forEach(el=>g.from(el,{y:40,opacity:0,duration:.8,scrollTrigger:{trigger:el,start:'top 88%',once:true}}));
-    $$('.sec-head h2,.phead h2').forEach(el=>g.from(el,{x:-30,opacity:0,duration:.7,scrollTrigger:{trigger:el,start:'top 90%',once:true}}));
+    $$('.rv-group').forEach(grp=>g.from(grp.querySelectorAll('.rv'),{opacity:0,duration:.7,stagger:.1,ease:'power3.out',scrollTrigger:{trigger:grp,start:'top 88%',once:true}}));
+    $('.rv-solo').forEach(el=>g.from(el,{opacity:0,duration:.6,scrollTrigger:{trigger:el,start:'top 90%',once:true}}));
+    $('.thesis.rv').forEach(el=>g.from(el,{opacity:0,duration:.8,scrollTrigger:{trigger:el,start:'top 88%',once:true}}));
+    $('.sec-head h2,.phead h2').forEach(el=>g.from(el,{opacity:0,duration:.7,scrollTrigger:{trigger:el,start:'top 90%',once:true}}));
     $$('#paths').forEach(el=>ScrollTrigger.create({trigger:el,start:'top 85%',once:true,onEnter:()=>{$$('#paths .pth').forEach((p,i)=>{const L=p.getTotalLength();g.fromTo(p,{strokeDasharray:L,strokeDashoffset:L},{strokeDashoffset:0,duration:1.6,delay:i*.07,ease:'power2.out',onComplete:()=>{p.style.strokeDasharray='7 6';g.to(p,{strokeDashoffset:-130,duration:8,repeat:-1,ease:'none'})}})})}}));
   }
 }
