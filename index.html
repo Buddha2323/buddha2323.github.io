@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Buddha Dev Biswas</title>
+<meta name="description" content="Buddha Dev Biswas, sociologist at Karnataka State Law University and doctoral researcher at ISEC. Work on caste, identity, recognition, youth aspiration and the legitimacy of protest in India.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+/* VOICE  scholarly but alive: an academic homepage with movement and a sense of place
+   IDEA   a kantha cloth from Bengal: running-stitch rows laid in strata, threads crossing between layers (social fabric, stratification, mobility)
+   PICTURE full-bleed animated cloth behind the hero, stitches flowing; portrait framed in a stitched border; threads draw themselves
+   COLOUR soothing: linen ground, sea-glass bands, dusty blue ink accents, muted rose highlight, sage and sand threads
+   TYPE   Newsreader (scholarly book face) display + DM Sans text
+   LAYOUT laptop: name left, portrait right over the cloth; phone: portrait, name, buttons stacked; sections as full-width bands */
+:root{color-scheme:light dark;--bg:light-dark(#fbfaf7,#14171c);--ink:light-dark(#252838,#ebe9e4);--soft:light-dark(#5e6274,#aaacb8);--rule:light-dark(#e4e1d8,#2a2e38);--tint:light-dark(#f3f0ea,#1b1f27);--band:light-dark(#e9f0ed,#182226);--band2:light-dark(#dfe9e4,#1d2a2d);--deep:light-dark(#3d5a75,#a9c4dc);--mad:light-dark(#a9505c,#e8a1a8);--madf:light-dark(#b5646e,#e8a1a8);--cl0:light-dark(#edf3f0,#172024);--cl1:light-dark(#e3ebe7,#1b262a);--sky:#7e9bb5;--thr:#f4efe4}
+:root[data-theme=light]{color-scheme:light}
+:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-padding-top:72px;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16.5px/1.6 "DM Sans",system-ui,sans-serif;overflow-x:clip}
+a{color:inherit}
+img{max-width:100%;display:block}
+h1,h2,h3{font-family:Newsreader,Georgia,serif;font-weight:500;letter-spacing:-.015em;line-height:1.08;text-wrap:balance;margin:0}
+h2{font-size:clamp(30px,3.8vw,46px)}
+h3{font-size:19px;line-height:1.3;letter-spacing:-.01em}
+p{margin:0 0 1em;max-width:68ch}
+.wrap{max-width:1240px;margin:0 auto}
+.band{padding-block:clamp(48px,6vw,96px);padding-inline:max(5vw,16px)}
+
+/* nav */
+nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);color:var(--ink);border-bottom:1px solid var(--rule)}
+nav .wrap{display:flex;align-items:center;gap:20px;padding:12px max(5vw,16px);flex-wrap:wrap}
+nav .me{font-family:Newsreader,Georgia,serif;font-weight:600;font-size:18px;text-decoration:none;margin-right:auto;display:flex;align-items:center;gap:10px}
+nav .me i{width:30px;height:30px;border-radius:50%;background:url(photo.jpg) 50% 14%/cover;border:1.5px dashed var(--mad)}
+nav .links{display:flex;gap:4px 18px;flex-wrap:wrap}
+nav .links a{text-decoration:none;font-size:14.5px;opacity:.8;padding:6px 0;position:relative}
+nav .links a::after{content:"";position:absolute;left:0;right:0;bottom:2px;border-bottom:2px dashed var(--madf);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+nav .links a:hover,nav .links a:focus-visible,nav .links a.on{opacity:1}
+nav .links a:hover::after,nav .links a.on::after{transform:scaleX(1)}
+#prog{position:absolute;left:0;bottom:-3px;height:3px;width:100%;background:repeating-linear-gradient(90deg,var(--madf) 0 10px,transparent 10px 16px);transform-origin:left;transform:scaleX(0)}
+
+/* hero */
+.hero{position:relative;background:var(--band);color:var(--ink);overflow:hidden;isolation:isolate}
+.hero #cloth{position:absolute;inset:0;width:100%;height:100%;z-index:-2}
+#cloth .b0{fill:var(--cl0)}
+#cloth .b1{fill:var(--cl1)}
+.stf{stroke:var(--mad)}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,var(--band) 0%,color-mix(in srgb,var(--band) 90%,transparent) 42%,color-mix(in srgb,var(--band) 30%,transparent) 100%)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(28px,5vw,80px);align-items:center;min-height:min(84svh,800px)}
+.htext{max-width:620px}
+.hello{font-size:17px;color:var(--mad);margin-bottom:10px}
+.hero h1{font-size:clamp(48px,6.6vw,88px);line-height:1;margin-bottom:14px;font-weight:500}
+.hero h1 .w{display:inline-block;overflow:hidden;padding-bottom:.08em;vertical-align:bottom}
+.hero h1 .c{display:inline-block}
+.rot{font-family:Newsreader,Georgia,serif;font-style:italic;font-size:clamp(21px,2.3vw,27px);color:var(--soft);min-height:1.4em;margin-bottom:22px;padding-bottom:18px;border-bottom:1.5px dashed var(--rule)}
+.rot b{font-weight:400;color:var(--deep);border-right:2px solid var(--madf);padding-right:4px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{border-color:transparent}}
+.lead{color:var(--soft);font-size:17.5px;line-height:1.7;max-width:none;text-align:justify;hyphens:manual}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 22px;border-radius:999px;text-decoration:none;font-weight:600;font-size:15px;border:1.5px solid var(--deep);color:var(--deep);transition:transform .25s,background .25s}
+.btn.solid{background:var(--deep);color:var(--bg);border-color:var(--deep)}
+.btn:hover{transform:translateY(-3px)}
+.btn:focus-visible{outline:2px solid var(--mad);outline-offset:3px}
+.ids{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:22px}
+.ids a{display:inline-flex;align-items:center;gap:8px;font-size:14.5px;font-weight:500;color:var(--ink);text-decoration:none;min-height:36px;border-bottom:1.5px dashed transparent;transition:border-color .25s}
+.ids a:hover,.ids a:focus-visible{border-color:var(--mad)}
+.ids svg{width:22px;height:22px;flex:none}
+.contact .ids{margin-top:18px}
+.portrait{position:relative;justify-self:center;width:min(100%,380px);transform-style:preserve-3d;transition:transform .2s ease-out}
+.portrait .frame{position:relative;border-radius:200px 200px 18px 18px;overflow:hidden;aspect-ratio:3/4;box-shadow:0 30px 60px -24px #3d5a7566}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:50% 12%}
+.portrait .ring{position:absolute;inset:-12px;border:2.5px dashed var(--mad);border-radius:212px 212px 28px 28px;pointer-events:none}
+.portrait .tag{position:absolute;left:-18px;bottom:28px;background:var(--bg);color:var(--ink);border-radius:12px;padding:10px 14px;font-size:13.5px;line-height:1.35;box-shadow:0 12px 30px -12px #3d5a7555;max-width:15em}
+.portrait .tag b{display:block;font-family:Newsreader,Georgia,serif;font-size:16px}
+.portrait .tag2{left:auto;right:-14px;bottom:108px;background:var(--madf);color:light-dark(#fff,#14171c)}
+.scrollcue{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);font-size:13px;color:var(--soft);display:flex;flex-direction:column;align-items:center;gap:6px}
+.scrollcue i{width:2px;height:34px;background:repeating-linear-gradient(180deg,var(--deep) 0 5px,transparent 5px 9px);animation:drip 1.6s linear infinite}
+@keyframes drip{to{background-position:0 9px}}
+
+/* stats + marquee */
+.stats{position:relative;isolation:isolate;overflow:hidden;background:var(--tint);color:var(--ink);border-block:1px solid var(--rule)}
+.stats #net{position:absolute;inset:0;width:100%;height:100%;z-index:-1;cursor:crosshair}
+.stats .wrap{pointer-events:none}
+.stats .wrap>div{background:color-mix(in srgb,var(--tint) 82%,transparent);border-radius:12px;padding:6px 12px;width:fit-content;box-shadow:0 0 18px 10px color-mix(in srgb,var(--tint) 70%,transparent)}
+.stats .hint{position:absolute;right:max(5vw,16px);bottom:8px;font-size:12.5px;color:var(--soft);pointer-events:none}
+/* walking crowd */
+.crowd{position:relative;height:96px;overflow:hidden;border-bottom:1.5px dashed var(--rule);margin:0 max(5vw,16px)}
+.walker{position:absolute;bottom:0;left:0;width:22px;height:54px;animation:cross linear infinite;will-change:transform}
+.walker svg{width:100%;height:100%;overflow:visible;animation:bob .6s ease-in-out infinite alternate}
+.walker .lg1{transform-origin:11px 34px;animation:leg .6s ease-in-out infinite alternate}
+.walker .lg2{transform-origin:11px 34px;animation:leg .6s ease-in-out infinite alternate-reverse}
+.walker.rev{animation-name:crossr}
+.walker.rev svg{transform:scaleX(-1)}
+@keyframes cross{from{transform:translateX(-60px)}to{transform:translateX(calc(100vw + 60px))}}
+@keyframes crossr{from{transform:translateX(calc(100vw + 60px))}to{transform:translateX(-60px)}}
+@keyframes leg{from{transform:rotate(-22deg)}to{transform:rotate(22deg)}}
+@keyframes bob{from{translate:0 0}to{translate:0 -2px}}
+.crowd-cap{text-align:center;font-family:Newsreader,Georgia,serif;font-style:italic;color:var(--soft);font-size:17px;margin:14px max(5vw,16px) 0}
+.stats .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(11em,1fr));gap:20px 32px}
+.stats b{display:block;font-family:Newsreader,Georgia,serif;font-size:clamp(34px,4vw,48px);font-weight:600;line-height:1.1}
+.stats b{color:var(--deep)}
+.stats span{font-size:14.5px;color:var(--soft)}
+.marq{background:var(--band2);color:var(--deep);overflow:hidden;padding:14px 0;white-space:nowrap}
+.marq .row{display:inline-flex;gap:0;animation:slide 42s linear infinite}
+.marq span{font-family:Newsreader,Georgia,serif;font-size:21px;font-style:italic;padding:0 22px;display:inline-flex;align-items:center;gap:44px}
+.marq span::after{content:"";width:24px;border-top:2px dashed var(--mad)}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* section heads */
+.sec-head{display:grid;grid-template-columns:minmax(0,15em) minmax(0,1fr);gap:clamp(20px,4vw,64px)}
+.sec-head>div:first-child{position:relative;padding-top:22px}
+.sec-head>div:first-child::before{content:"";position:absolute;top:0;left:0;width:100%;border-top:2px dashed var(--mad)}
+.sec-head h2{margin-bottom:12px}
+.kicker{color:var(--soft);font-size:15.5px;max-width:28ch}
+.sticky{position:sticky;top:90px}
+
+/* what I do */
+.lanes{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,15em),1fr));gap:18px}
+.lane{position:relative;padding:26px 22px 22px;border-radius:14px;background:var(--tint);border:1px solid var(--rule);overflow:hidden;transition:transform .3s,box-shadow .3s}
+.lane:hover{transform:translateY(-6px);box-shadow:0 22px 40px -24px #3d5a7566}
+.lane svg{width:54px;height:54px;margin-bottom:14px}
+.lane h3{margin-bottom:8px}
+.lane p{color:var(--soft);font-size:15px;margin:0}
+.lane a{color:var(--mad);font-weight:600;font-size:14.5px;text-decoration:none;display:inline-block;margin-top:10px}
+
+/* thesis */
+.thesis{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:0;border-radius:18px;overflow:hidden;background:var(--band);color:var(--ink);margin-bottom:26px;border:1px solid var(--rule)}
+.thesis .tx{padding:clamp(24px,3.5vw,40px)}
+.thesis .lbl{color:var(--mad);font-size:14.5px;margin-bottom:10px}
+.thesis h3{font-size:clamp(24px,2.6vw,32px);line-height:1.15;margin-bottom:14px}
+.thesis p{color:var(--soft);font-size:15.5px}
+.thesis .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.thesis .meta span{border:1px solid var(--rule);background:var(--bg);border-radius:999px;padding:5px 12px;font-size:13.5px;color:var(--ink)}
+.thesis .fig{position:relative;min-height:300px;background:var(--band2)}
+.thesis .fig svg{position:absolute;inset:0;width:100%;height:100%}
+.mss{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,20em),1fr));gap:18px}
+.ms{position:relative;padding:24px;border-radius:14px;border:1.5px dashed var(--rule);background:var(--bg);transition:border-color .3s,transform .3s}
+.ms:hover{border-color:var(--mad);transform:translateY(-4px)}
+.chip{display:inline-block;font-size:13px;font-weight:600;padding:4px 11px;border-radius:999px;margin-bottom:12px;background:color-mix(in srgb,var(--mad) 14%,transparent);color:var(--mad)}
+.chip.b{background:color-mix(in srgb,#3c64c8 16%,transparent);color:light-dark(#2b4fa8,#9fc3e6)}
+.ms h3{margin-bottom:8px}
+.ms p{color:var(--soft);font-size:15px;margin:0}
+.ms .with{display:block;margin-top:10px;font-size:14px;color:var(--soft)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 0;padding:0;list-style:none}
+.tags li{border:1px solid var(--rule);background:var(--tint);border-radius:999px;padding:6px 14px;font-size:14.5px;transition:background .25s,color .25s}
+.tags li:hover{background:var(--deep);color:var(--bg)}
+
+/* publications */
+.pubs{list-style:none;margin:0;padding:0}
+.pubs li{display:grid;grid-template-columns:4.5em minmax(0,1fr);gap:16px;padding:22px 0;border-bottom:1px solid var(--rule);transition:padding .3s}
+.pubs li:first-child{padding-top:4px}
+.pubs li:hover{padding-left:8px}
+.yr{font-family:Newsreader,Georgia,serif;font-size:24px;color:var(--mad);font-weight:600}
+.pubs h3{font-size:19.5px;margin-bottom:6px}
+.pubs .src{color:var(--soft);font-size:15px}
+.pubs .src i{color:var(--ink)}
+.doi{display:inline-flex;gap:6px;margin-top:8px;font-size:14px;color:var(--mad);font-weight:600;text-decoration:none;overflow-wrap:anywhere}
+.doi:hover{text-decoration:underline;text-underline-offset:3px}
+
+/* books */
+.shelf{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;align-items:stretch}
+.book{position:relative;aspect-ratio:2/3;border-radius:4px 12px 12px 4px;padding:22px 18px 18px 26px;color:#fff;display:flex;flex-direction:column;justify-content:space-between;box-shadow:inset 8px 0 0 #0002,0 18px 34px -18px #3d5a7588;transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s;overflow:hidden}
+.book:hover{transform:translateY(-6px)}
+.book::after{content:"";position:absolute;left:10px;right:10px;top:10px;bottom:10px;border:1.5px dashed #ffffff55;border-radius:3px 8px 8px 3px;pointer-events:none}
+.book h3{font-size:clamp(17px,1.7vw,21px);line-height:1.15;position:relative}
+.book .sub{font-size:13px;opacity:.85;margin-top:8px;position:relative;line-height:1.35}
+.book .by{font-size:13px;opacity:.9;position:relative}
+.bk1{background:#4f6d8a}.bk2{background:#a9606a}.bk3{background:#5f8a77}.bk4{background:#7d6f94}
+.shelf-note{color:var(--soft);font-size:15px;margin-top:18px}
+
+/* teaching */
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,19em),1fr));gap:28px 48px}
+h4{font:600 15.5px/1.4 "DM Sans",system-ui,sans-serif;margin:0 0 12px;color:var(--mad)}
+.plain{margin:0;padding:0;list-style:none}
+.plain li{margin-bottom:10px;font-size:15.5px;padding-left:22px;position:relative}
+.plain li::before{content:"";position:absolute;left:0;top:.72em;width:12px;border-top:2px dashed var(--mad)}
+.plain li span{color:var(--soft)}
+
+/* public */
+.pub2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,22em),1fr));gap:20px}
+.pcard{position:relative;border-radius:16px;padding:28px;overflow:hidden;color:var(--ink);border:1px solid var(--rule);min-height:240px;display:flex;flex-direction:column;justify-content:flex-end}
+.pcard.yt{background:light-dark(#f4e9e7,#2a2124)}
+.pcard.net{background:light-dark(#e4eee8,#1c2a24)}
+.pcard h3{font-size:26px;margin-bottom:8px;position:relative}
+.pcard p{color:var(--soft);font-size:15.5px;position:relative;margin:0}
+.pcard a{position:relative;color:var(--mad);font-weight:600;margin-top:12px;display:inline-block;overflow-wrap:anywhere}
+.pcard .art{position:absolute;right:-10px;top:-10px;width:200px;height:200px;opacity:.55;color:var(--deep)}
+
+/* timeline */
+.tl{list-style:none;margin:0;padding:0}
+.tl li{position:relative;padding:0 0 24px 28px;border-left:2px dashed var(--rule)}
+.tl li:last-child{padding-bottom:0}
+.tl li::before{content:"";position:absolute;left:-8px;top:5px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:2.5px solid var(--mad)}
+.tl .when{font-size:14px;color:var(--soft);white-space:nowrap}
+.tl h3{font-size:18.5px;margin:2px 0 4px}
+.tl p{font-size:15px;color:var(--soft);margin:0}
+
+/* contact */
+.contact{position:relative;background:var(--band);color:var(--ink);overflow:hidden;isolation:isolate}
+.contact canvas{position:absolute;inset:0;width:100%;height:100%;z-index:-1;opacity:.5}
+.contact .wrap{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:32px;align-items:end}
+.contact h2{font-size:clamp(36px,5vw,64px);margin-bottom:14px}
+.contact p{color:var(--soft)}
+.mail{font-family:Newsreader,Georgia,serif;font-size:clamp(20px,2.6vw,30px);color:var(--deep);overflow-wrap:anywhere}
+.copy{margin-top:14px;background:var(--deep);color:var(--bg);border:0;border-radius:999px;min-height:46px;padding:0 20px;font:600 14.5px "DM Sans",system-ui,sans-serif;cursor:pointer;transition:transform .2s}
+.copy:hover{transform:translateY(-2px)}
+.copy:focus-visible{outline:2px solid var(--mad);outline-offset:3px}
+footer{background:var(--tint);color:var(--soft);border-top:1px solid var(--rule);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;padding:20px max(5vw,16px)}
+
+
+/* sub heads in research */
+.subhead{margin:46px 0 20px;display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 18px;border-top:1px solid var(--rule);padding-top:22px}
+.sub-h{font-size:clamp(24px,2.6vw,30px)}
+.subhead p{margin:0;color:var(--soft);font-size:15px}
+/* article first-page covers */
+.covers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px;align-items:stretch}
+.cover{position:relative;display:block;text-decoration:none;color:#22242e;background:#fffdf8;border-radius:4px;padding:26px 26px 20px 30px;box-shadow:0 1px 0 #0001,0 18px 36px -22px #3d5a7599,0 0 0 1px #00000010;transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s;overflow:hidden;font-family:Georgia,serif;display:flex;flex-direction:column;height:100%}
+@supports (grid-template-rows:subgrid){.cover{display:grid;grid-row:span 8;grid-template-rows:subgrid;row-gap:0;align-content:start}.cv-top,.cv-t,.cv-kind{min-height:0}.cv-foot{align-self:end}}
+.cover::before{content:"";position:absolute;inset:0 auto 0 0;width:6px;background:var(--jc)}
+a.cover:hover,a.cover:focus-visible{transform:translateY(-6px);box-shadow:0 30px 50px -24px #3d5a75aa,0 0 0 1px #00000010;outline:none}
+.cv-top{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;padding-bottom:8px;border-bottom:3px double var(--jc);min-height:3.4em}
+.cv-j{font-family:Newsreader,Georgia,serif;font-weight:600;font-size:clamp(15px,1.5vw,19px);color:var(--jc);line-height:1.1}
+.cv-v{flex:none;max-width:45%;font:12px/1.3 "DM Sans",system-ui,sans-serif;color:#5b5e6b;text-align:right}
+.cv-kind{font:600 12px "DM Sans",system-ui,sans-serif;color:var(--jc);margin:16px 0 8px;min-height:1.3em}
+.cv-t{font-family:Newsreader,Georgia,serif;font-weight:600;font-size:clamp(15px,1.55vw,19.5px);line-height:1.2;letter-spacing:-.01em;margin:0 0 12px;color:#1c1e27;min-height:4.8em}
+.cv-a{font:500 13.5px "DM Sans",system-ui,sans-serif;color:#2b2e3a;margin-bottom:14px}
+.cv-abs{font:600 11.5px "DM Sans",system-ui,sans-serif;color:#5b5e6b;margin-bottom:6px}
+.lines{display:grid;gap:6px}
+.lines i{display:block;height:5px;border-radius:3px;background:#e7e4dc}
+.cv-cols{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+.cv-foot{margin-top:auto;padding-top:10px;border-top:1px solid #e7e4dc;font:11.5px/1.35 "DM Sans",system-ui,sans-serif;color:#5b5e6b;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.cv-foot b{color:var(--jc);font-weight:600;overflow-wrap:anywhere}
+.cv-go{position:absolute;right:12px;bottom:12px;background:var(--jc);color:#fff;font:600 12.5px "DM Sans",system-ui,sans-serif;padding:7px 12px;border-radius:999px;opacity:0;transform:translateY(8px);transition:.3s}
+a.cover:hover .cv-go,a.cover:focus-visible .cv-go{opacity:1;transform:none}
+.cov-note{color:var(--soft);font-size:13.5px;margin-top:14px}
+/* books wip */
+.book .rib{position:relative;align-self:flex-start;background:#fffdf8;color:#4a4d5c;font:600 11.5px "DM Sans",system-ui,sans-serif;padding:3px 10px;border-radius:999px;margin-bottom:12px}
+.book>div:first-of-type{flex:1}
+.wip{display:inline-block;background:color-mix(in srgb,var(--mad) 15%,transparent);color:var(--mad);font-weight:600;font-size:13px;border-radius:999px;padding:3px 10px;margin-right:6px}
+/* profile tabs */
+.phead{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 30px;border-top:2px dashed var(--mad);padding-top:22px;margin-bottom:22px}
+.phead .kicker{max-width:none}
+.tabs{position:relative;display:flex;gap:4px;overflow-x:auto;border-bottom:1px solid var(--rule);margin-bottom:30px;scrollbar-width:none}
+.tabs button{flex:none;background:none;border:0;font:600 15.5px "DM Sans",system-ui,sans-serif;color:var(--soft);padding:12px 16px;min-height:48px;cursor:pointer;border-radius:10px 10px 0 0;transition:color .25s,background .25s}
+.tabs button:hover{color:var(--ink);background:var(--tint)}
+.tabs button[aria-selected=true]{color:var(--deep)}
+.tabs button:focus-visible{outline:2px solid var(--mad);outline-offset:-2px}
+.tabs .ind{position:absolute;bottom:0;left:0;height:3px;border-radius:3px;background:var(--mad);transition:transform .4s cubic-bezier(.2,.8,.2,1),width .4s cubic-bezier(.2,.8,.2,1)}
+.panel{min-height:280px}
+.pintro{display:grid;grid-template-columns:minmax(0,auto) minmax(0,1fr);gap:16px 36px;align-items:center;background:var(--band);border-radius:16px;padding:clamp(20px,3vw,32px);margin-bottom:22px}
+.pintro .big{font-family:Newsreader,Georgia,serif;font-weight:600;font-size:clamp(30px,4vw,48px);color:var(--deep);line-height:1;white-space:nowrap}
+.pintro h3{font-size:22px;margin-bottom:6px}
+.pintro p{margin:0;color:var(--soft)}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,15em),1fr));gap:16px}
+.pc{background:var(--bg);border:1px solid var(--rule);border-radius:14px;padding:20px;transition:transform .3s,border-color .3s}
+.pc:hover{transform:translateY(-4px);border-color:var(--mad)}
+.pc .ic{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;font:600 16px Newsreader,Georgia,serif;color:#fff;margin-bottom:14px}
+.pc h3{font-size:17.5px;margin-bottom:6px}
+.pc p{margin:0;color:var(--soft);font-size:14.5px}
+.road{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;padding-top:34px}
+.road::before{content:"";position:absolute;left:8%;right:8%;top:12px;border-top:3px dashed var(--mad);transform-origin:left;transform:scaleX(var(--rs,1))}
+.stop{position:relative;background:var(--bg);border:1px solid var(--rule);border-radius:14px;padding:22px 20px}
+.stop::before{content:"";position:absolute;top:-30px;left:50%;width:18px;height:18px;margin-left:-9px;border-radius:50%;background:var(--bg);border:3px solid var(--deep)}
+.stop .yr2{font-family:Newsreader,Georgia,serif;font-size:22px;color:var(--mad);font-weight:600}
+.stop h3{font-size:18.5px;margin:4px 0 6px}
+.stop p{margin:0;color:var(--soft);font-size:14.5px}
+.stop .gold{display:inline-block;margin-top:10px;background:#f3e3b8;color:#6b4e0e;font-size:12.5px;font-weight:600;border-radius:999px;padding:3px 10px}
+.quals{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,15em),1fr));gap:14px}
+.ql{display:flex;gap:14px;align-items:flex-start;background:var(--tint);border-radius:12px;padding:16px}
+.ql b{flex:none;font-family:Newsreader,Georgia,serif;font-size:18px;color:var(--deep);white-space:nowrap}
+.ql span{font-size:14.5px;color:var(--soft)}
+@media(max-width:760px){.covers{grid-template-columns:minmax(0,1fr)}.cover .cv-t{min-height:0}.road{grid-template-columns:minmax(0,1fr);padding-top:0;padding-left:30px}.road::before{left:10px;right:auto;top:8px;bottom:8px;border-top:0;border-left:3px dashed var(--mad);transform:none}.stop::before{top:24px;left:-29px;margin-left:0}.pintro{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:980px){.shelf{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:860px){.hero .wrap,.contact .wrap,.thesis{grid-template-columns:minmax(0,1fr)}.hero::before{background:color-mix(in srgb,var(--band) 82%,transparent)}.portrait{order:-1;width:min(70%,280px);margin-top:12px}.hero .wrap{min-height:0;padding-bottom:40px}.scrollcue{display:none}.sec-head{grid-template-columns:minmax(0,1fr)}.kicker{max-width:none}.sticky{position:static}.thesis .fig{min-height:200px;order:-1}}
+@media(max-width:600px){nav .links{width:100%;overflow-x:auto;flex-wrap:nowrap;padding-bottom:2px}nav .links a{flex:none}.pubs li{grid-template-columns:minmax(0,1fr);gap:2px}.portrait{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}.portrait .frame{width:100%}.portrait .ring{bottom:auto;height:calc(100% - 0px);display:none}.portrait .tag,.portrait .tag2{position:static;max-width:none;font-size:12.5px;margin-top:6px}.lead{text-align:left}.portrait .tag,.portrait .tag2{flex:1 1 0;padding:8px 10px}.shelf{gap:14px}.book{padding:16px 12px 12px 18px}}
+@media(prefers-reduced-motion:reduce){.walker,.walker svg,.walker line{animation:none!important}.walker{transform:translateX(var(--x0))}html{scroll-behavior:auto}.marq .row,.rot b,.scrollcue i{animation:none}.book,.lane,.ms,.btn{transition:none}}
+</style>
+</head>
+<body>
+<nav aria-label="Main">
+  <div class="wrap">
+    <a class="me" href="#top"><i aria-hidden="true"></i>Buddha Dev Biswas</a>
+    <div class="links" id="links">
+      <a href="#profile">Profile</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#books">Books</a>
+      <a href="#public">Beyond the classroom</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+  <div id="prog"></div>
+</nav>
+
+<header class="hero band" id="top">
+  <svg id="cloth" aria-hidden="true"></svg>
+  <div class="wrap">
+    <div class="htext">
+      <p class="hello a-in">Namaskar, I am</p>
+      <h1 id="name">Buddha Dev Biswas</h1>
+      <p class="rot a-in" aria-live="polite"><span>a </span><b id="rot">sociologist</b></p>
+      <p class="lead a-in">I teach sociology at Karnataka State Law University, Hubballi, and I am a doctoral researcher at the Institute for Social and Economic Change, Bengaluru. I study how caste and identity are claimed, recognised and lived; how young people come to want the lives they want; and how publics decide whether a protest is legitimate.</p>
+      <div class="btns a-in">
+        <a class="btn solid" href="#research">Explore my research</a>
+        <a class="btn" href="#publications">Publications</a>
+        <a class="btn" href="#contact">Say hello</a>
+      </div>
+      <div class="ids a-in" aria-label="Research profiles">
+        <a href="https://orcid.org/0000-0002-8084-0653"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#a6ce39"/><path d="M8 7.5v9M10.5 10v6.5h2.6a3.25 3.25 0 0 0 0-6.5z" stroke="#fff" stroke-width="1.6" fill="none"/><circle cx="8" cy="5.6" r="1" fill="#fff"/></svg>ORCID</a>
+        <a href="https://scholar.google.com/citations?user=2TCK3WkAAAAJ&amp;hl=en"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#4285f4"/><path d="M12 5 4.5 10.5h3.2A4.4 4.4 0 0 0 12 18a4.4 4.4 0 0 0 4.3-7.5h3.2z" fill="#fff"/></svg>Google Scholar</a>
+        <a href="https://www.scopus.com/authid/detail.uri?authorId=59955972100"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#e9711c"/><path d="M15.5 8.6c-.8-.9-2-1.4-3.4-1.4-2 0-3.3 1-3.3 2.4 0 3.2 6.8 1.9 6.8 5.1 0 1.5-1.4 2.6-3.6 2.6-1.5 0-2.8-.6-3.6-1.6" stroke="#fff" stroke-width="1.7" fill="none" stroke-linecap="round"/></svg>Scopus</a>
+        <a href="https://www.webofscience.com/wos/author/record/LBH-8418-2024"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#5e33bf"/><path d="M6 8l2.2 8 2-6 1.8 6 2-6 2 6L18 8" stroke="#fff" stroke-width="1.6" fill="none" stroke-linejoin="round" stroke-linecap="round"/></svg>Web of Science</a>
+      </div>
+    </div>
+    <div class="portrait" id="portrait">
+      <div class="frame"><img src="photo.jpg" alt="Portrait of Buddha Dev Biswas"></div>
+      <span class="ring" aria-hidden="true"></span>
+      <div class="tag"><b>Assistant Professor</b>Sociology, KSLU Hubballi</div>
+      <div class="tag tag2"><b>PhD researcher</b>ISEC Bengaluru</div>
+    </div>
+  </div>
+  <div class="scrollcue" aria-hidden="true">scroll<i></i></div>
+</header>
+
+<section class="stats band" style="padding-block:34px" aria-label="At a glance">
+  <canvas id="net" aria-hidden="true"></canvas>
+  <span class="hint" aria-hidden="true">move your cursor through the network</span>
+  <div class="wrap">
+    <div><b data-count="4">4</b><span>published articles and chapters</span></div>
+    <div><b data-count="4">4</b><span>textbooks in preparation</span></div>
+    <div><b data-count="3">3</b><span>journals I review for</span></div>
+    <div><b data-count="4">4</b><span>conference papers presented</span></div>
+  </div>
+</section>
+<div class="marq" aria-hidden="true"><div class="row" id="marq"></div></div>
+
+<main>
+
+<section class="band" id="profile">
+  <div class="wrap">
+    <div class="phead rv-solo">
+      <h2>Academic profile</h2>
+      <p class="kicker">Choose a tab to see one part of my academic life at a time.</p>
+    </div>
+    <div class="tabs" role="tablist" aria-label="Academic profile" id="tabs">
+      <button role="tab" id="t-teach" aria-controls="p-teach" aria-selected="true">Teaching</button>
+      <button role="tab" id="t-serv" aria-controls="p-serv" aria-selected="false" tabindex="-1">University service</button>
+      <button role="tab" id="t-edu" aria-controls="p-edu" aria-selected="false" tabindex="-1">Education</button>
+      <button role="tab" id="t-rev" aria-controls="p-rev" aria-selected="false" tabindex="-1">Peer review</button>
+      <button role="tab" id="t-talk" aria-controls="p-talk" aria-selected="false" tabindex="-1">Talks</button>
+      <span class="ind" id="tabind" aria-hidden="true"></span>
+    </div>
+
+    <div class="panel" role="tabpanel" id="p-teach" aria-labelledby="t-teach">
+      <div class="pintro"><div class="big">Since Oct 2024</div><div><h3>Assistant Professor (Sociology)</h3><p>Karnataka State Law University, Hubballi. I teach sociology to BA LLB students, connecting social theory and Indian society to questions of law and justice.</p></div></div>
+      <div class="pgrid" id="g-teach"></div>
+    </div>
+
+    <div class="panel" role="tabpanel" id="p-serv" aria-labelledby="t-serv" hidden>
+      <div class="pintro"><div class="big">KSLU</div><div><h3>Serving the university</h3><p>Administrative and event responsibilities alongside teaching.</p></div></div>
+      <div class="pgrid" id="g-serv"></div>
+    </div>
+
+    <div class="panel" role="tabpanel" id="p-edu" aria-labelledby="t-edu" hidden>
+      <div class="road" id="g-edu"></div>
+      <h4 style="margin-top:34px">Qualifications</h4>
+      <div class="quals" id="g-qual"></div>
+    </div>
+
+    <div class="panel" role="tabpanel" id="p-rev" aria-labelledby="t-rev" hidden>
+      <div class="pintro"><div class="big">3 journals</div><div><h3>Reviewing for journals</h3><p>I review manuscripts in sociology, psychology and interdisciplinary research.</p></div></div>
+      <div class="pgrid" id="g-rev"></div>
+    </div>
+
+    <div class="panel" role="tabpanel" id="p-talk" aria-labelledby="t-talk" hidden>
+      <div class="pintro"><div class="big">4 papers</div><div><h3>Conference presentations</h3><p>Papers presented at national conferences and seminars, 2023–2024.</p></div></div>
+      <ol class="pubs" id="talks"></ol>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="research" style="padding-top:0">
+  <div class="wrap sec-head">
+    <div class="sticky">
+      <h2>Research</h2>
+      <p class="kicker">How categories of identity become consequential, and how people live with, use and contest them.</p>
+    </div>
+    <div>
+      <article class="thesis rv">
+        <div class="tx">
+          <div class="lbl">Doctoral research · ISEC, Bengaluru</div>
+          <h3>Aspiration as Orientation: Youth and Their Futures Through and Beyond Educational and Occupational Pathways</h3>
+          <p>Policy and research often read aspiration as a destination: a degree, a job, a rank. This study asks what that reading leaves out. It treats aspiration as an orientation toward a life a young person has reason to value, and follows how that orientation forms, how it relates to educational and occupational plans, and how social position shapes the ways it can be pursued.</p>
+          <div class="meta"><span>Biographical narrative interviews</span><span>Young adults, 18–29</span><span>Supervisor: Dr Sobin George</span></div>
+        </div>
+        <div class="fig"><svg id="paths" aria-hidden="true"></svg></div>
+      </article>
+      <div id="publications" class="subhead rv-solo"><h3 class="sub-h">Published work</h3><p>Journal articles and a book chapter. Click a page to open it. Full listings on <a href="https://scholar.google.com/citations?user=2TCK3WkAAAAJ&amp;hl=en">Google Scholar</a>, <a href="https://www.scopus.com/authid/detail.uri?authorId=59955972100">Scopus</a>, <a href="https://orcid.org/0000-0002-8084-0653">ORCID</a> and <a href="https://www.webofscience.com/wos/author/record/LBH-8418-2024">Web of Science</a>.</p></div>
+      <div class="covers rv-group" id="covers"></div>
+      <div class="subhead rv-solo"><h3 class="sub-h">Work in progress</h3><p>Manuscripts currently in revision, under review or in development.</p></div>
+      <div class="mss rv-group">
+        <article class="ms rv">
+          <span class="chip">In revision</span>
+          <h3>The Negotiated–Embodied Caste: Mobility, Recognition and the Asymmetric Marking of Caste in Contemporary India</h3>
+          <p>A framework for why caste persists: it is embedded in bodies, perception and bureaucratic identity, yet that embeddedness is continually negotiated through mobility and state recognition.</p>
+        </article>
+        <article class="ms rv">
+          <span class="chip b">Under review</span>
+          <h3>The Two Archives</h3>
+          <p>How caste identity is held in two registers, the social and the documentary, and why documentary claims tend to move in one direction only. Draws on Kudmi-Mahato fieldwork.</p>
+        </article>
+        <article class="ms rv">
+          <span class="chip b">Under review</span>
+          <h3>Public reasoning about the legitimacy of protest</h3>
+          <p>A qualitative study of how members of the public judged whether the 2026 NEET protest in India was legitimate, read through online discourse.</p>
+          <span class="with">With Sagar Prasad (ISEC)</span>
+        </article>
+        <article class="ms rv">
+          <span class="chip">In development</span>
+          <h3>Recognising the Other: a gateway mechanism of discrimination</h3>
+          <p>Why the same prejudiced person discriminates in one situation and not another. The paper argues that categorical identification of the other is a condition for prejudice to become practice, and plans classroom experiments to test it.</p>
+        </article>
+      </div>
+      <div class="subhead rv-solo"><h3 class="sub-h">Areas of specialisation</h3></div>
+      <ul class="tags" id="tags" style="margin-top:0"></ul>
+    </div>
+  </div>
+</section>
+
+<div aria-hidden="true"><p class="crowd-cap">Everyday life, in public: people passing, pausing, walking together.</p><div class="crowd" id="crowd"></div></div>
+
+<section class="band" id="books">
+  <div class="wrap sec-head">
+    <div class="sticky">
+      <h2>Books in progress</h2>
+      <p class="kicker">Four textbooks for the BA LLB sociology curriculum, currently being written. None is published yet.</p>
+    </div>
+    <div>
+      <div class="shelf rv-group" id="shelf"></div>
+      <p class="shelf-note"><span class="wip">Work in progress</span> These books are being written and are not yet published. Each chapter pairs sociological ideas with Indian cases and short "Law in Focus" discussions.</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="band" id="public" style="padding-top:0">
+  <div class="wrap sec-head">
+    <div class="sticky">
+      <h2>Beyond the classroom</h2>
+      <p class="kicker">Sociology and philosophy for people who are not (yet) sociologists.</p>
+    </div>
+    <div>
+      <div class="pub2 rv-group">
+        <article class="pcard yt rv">
+          <svg class="art" viewBox="0 0 200 200" aria-hidden="true"><circle cx="120" cy="80" r="70" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="6 6"/><circle cx="80" cy="80" r="70" fill="none" stroke="#b5646e" stroke-width="2"/><path d="M92 60v40l32-20z" fill="#b5646e"/></svg>
+          <h3>Paradoxes of Being</h3>
+          <p>A YouTube channel in Hinglish that starts from questions people ask themselves and works through them with a text, from Bhagat Singh's "Why I Am an Atheist" to common myths about philosophical ideas.</p>
+        </article>
+        <article class="pcard net rv">
+          <svg class="art" viewBox="0 0 200 200" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="60" y="30" width="110" height="140" rx="10" stroke-dasharray="7 6"/><path d="M82 70l10 10 20-22M82 110l10 10 20-22" /><path d="M124 72h28M124 112h28M124 150h28" stroke-opacity=".6"/></g></svg>
+          <h3>UGC NET Test Series</h3>
+          <p>A test-series platform for UGC NET aspirants in Sociology and Paper 1, with free diagnostics, unit-wise sets, full mocks and explanations written to teach the reasoning.</p>
+          <a href="https://lambent-blini-372bc9.netlify.app">Visit the test series →</a>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<section class="contact band" id="contact">
+  <canvas id="sky" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div>
+      <h2>Let's talk</h2>
+      <p>I welcome conversations about collaboration, invited talks, guest lectures and research on caste, identity, aspiration and protest.</p>
+    </div>
+    <div>
+      <a class="mail" href="mailto:buddha956380@gmail.com">buddha956380@gmail.com</a><br>
+      <button class="copy" id="copy" type="button">Copy email address</button>
+      <div class="ids" aria-label="Research profiles">
+        <a href="https://orcid.org/0000-0002-8084-0653"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#a6ce39"/><path d="M8 7.5v9M10.5 10v6.5h2.6a3.25 3.25 0 0 0 0-6.5z" stroke="#fff" stroke-width="1.6" fill="none"/><circle cx="8" cy="5.6" r="1" fill="#fff"/></svg>ORCID</a>
+        <a href="https://scholar.google.com/citations?user=2TCK3WkAAAAJ&amp;hl=en"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#4285f4"/><path d="M12 5 4.5 10.5h3.2A4.4 4.4 0 0 0 12 18a4.4 4.4 0 0 0 4.3-7.5h3.2z" fill="#fff"/></svg>Google Scholar</a>
+        <a href="https://www.scopus.com/authid/detail.uri?authorId=59955972100"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#e9711c"/><path d="M15.5 8.6c-.8-.9-2-1.4-3.4-1.4-2 0-3.3 1-3.3 2.4 0 3.2 6.8 1.9 6.8 5.1 0 1.5-1.4 2.6-3.6 2.6-1.5 0-2.8-.6-3.6-1.6" stroke="#fff" stroke-width="1.7" fill="none" stroke-linecap="round"/></svg>Scopus</a>
+        <a href="https://www.webofscience.com/wos/author/record/LBH-8418-2024"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#5e33bf"/><path d="M6 8l2.2 8 2-6 1.8 6 2-6 2 6L18 8" stroke="#fff" stroke-width="1.6" fill="none" stroke-linejoin="round" stroke-linecap="round"/></svg>Web of Science</a>
+      </div>
+    </div>
+  </div>
+</section>
+<footer><div class="wrap"><span>© 2026 Buddha Dev Biswas</span><span>Hubballi and Bengaluru, Karnataka</span></div></footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+{
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ---------- content ---------- */
+const pubs=[
+ {y:2026,t:"The politics of recognition: the role of identity in social mobility among marginalised communities in India",s:"<i>Social Identities</i>, 1–12",d:"10.1080/13504630.2026.2682888"},
+ {y:2025,t:"Navigating caste, affirmative action and identity in contemporary India: a sociological study of Kudmi-Mahato migrants in North Bengal",s:"<i>Asian Affairs</i>, 56(2), 308–326",d:"10.1080/03068374.2025.2482790"},
+ {y:2025,t:"Rethinking the identity shift",s:"<i>Economic and Political Weekly</i>, 60(32)",d:"10.71279/epw.v60i32.45263"},
+ {y:2024,t:"Guardians of sustainability: women's role in India's indigenous knowledge system",s:"In A. K. Pandey (Ed.), <i>Indigenous Knowledge System: A Leading Way to Sustainability</i> (pp. 141–151). IBRJ Publications",d:""}
+];
+const jc={si:"#2c6e75",aa:"#8a3446",epw:"#b4412f",ch:"#5b4a86"};
+const fp=[
+ {k:"si",j:"Social Identities",v:"2026, 1–12",kind:"Article",t:"The politics of recognition: the role of identity in social mobility among marginalised communities in India",d:"10.1080/13504630.2026.2682888",f:"Taylor & Francis"},
+ {k:"aa",j:"Asian Affairs",v:"2025, Vol. 56, No. 2, 308–326",kind:"Article",t:"Navigating Caste, Affirmative Action and Identity in Contemporary India: A Sociological Study of Kudmi-Mahato Migrants in North Bengal",d:"10.1080/03068374.2025.2482790",f:"Taylor & Francis"},
+ {k:"epw",j:"Economic & Political Weekly",v:"2025, Vol. 60, Issue No. 32",kind:"Article",t:"Rethinking the Identity Shift",d:"10.71279/epw.v60i32.45263",f:"Sameeksha Trust"},
+ {k:"ch",j:"Indigenous Knowledge System: A Leading Way to Sustainability",v:"2024, pp. 141–151",kind:"Book chapter · ed. A. K. Pandey",t:"Guardians of Sustainability: Women's Role in India's Indigenous Knowledge System",d:"",f:"IBRJ Publications"}
+];
+const bars=(n,w)=>Array.from({length:n},(_,i)=>`<i style="width:${i===n-1?w:100}%"></i>`).join('');
+$('#covers').innerHTML=fp.map(c=>{const inner=`<div class="cv-top"><div class="cv-j">${c.j}</div><div class="cv-v">${c.v}</div></div><div class="cv-kind">${c.kind}</div><h4 class="cv-t">${c.t}</h4><div class="cv-a">Buddha Dev Biswas</div><div class="cv-abs">Abstract</div><div class="lines">${bars(4,62)}</div><div class="cv-cols"><div class="lines">${bars(4,70)}</div><div class="lines">${bars(4,45)}</div></div><div class="cv-foot"><span>${c.f}</span>${c.d?`<b>doi.org/${c.d}</b>`:'<b>Edited volume</b>'}</div>`;return c.d?`<a class="cover rv" style="--jc:${jc[c.k]}" href="https://doi.org/${c.d}" aria-label="Open article: ${c.t}">${inner}<span class="cv-go">Read article →</span></a>`:`<div class="cover rv" style="--jc:${jc[c.k]}">${inner}</div>`}).join('');
+$('#covers').insertAdjacentHTML('afterend','<p class="cov-note">The pages above are stylised previews of each article\'s first page; they open the publisher\'s version.</p>');
+
+const talks=[
+ {y:2024,t:"The construction of virtual identity: analysing presentation of self through tags and trends",s:"Department of Sociology, Jamia Millia Islamia, New Delhi"},
+ {y:2023,t:"The identity paradox: a distorted concept of self-expression",s:"48th All India Sociological Conference, VIT Vellore"},
+ {y:2023,t:"Towards a holistic approach: fostering interdisciplinary sustainability education",s:"13th National Conference on Transforming Higher Education for Sustainable Development"},
+ {y:2023,t:"Guardians of sustainability: women's role in India's indigenous knowledge system",s:"ICSSR-sponsored National Seminar on Indigenous Knowledge Systems"}
+];
+$('#talks').innerHTML=talks.map(p=>`<li class="rv"><span class="yr">${p.y}</span><div><h3>${p.t}</h3><div class="src">${p.s}</div></div></li>`).join('');
+
+const books=[
+ {c:"bk1",t:"From Custom to Constitution",s:"Sociology for law students, Semester II",b:"with Dr Rangaswamy D"},
+ {c:"bk2",t:"Challenges of Indian Society",s:"A sociological perspective for law students",b:"Semester IV"},
+ {c:"bk3",t:"Society at the Margins",s:"A sociological introduction to marginalised communities",b:"Semester V"},
+ {c:"bk4",t:"Questioning the Obvious",s:"An introduction to sociology",b:"Buddha Dev Biswas"}
+];
+$('#shelf').innerHTML=books.map(b=>`<div class="book ${b.c} rv"><span class="rib">In progress</span><div><h3>${b.t}</h3><div class="sub">${b.s}</div></div><div class="by">${b.b}</div></div>`).join('');
+
+const edu=[
+ {w:"2025 – now",h:"PhD, Development Studies",p:"Institute for Social and Economic Change, Bengaluru"},
+ {w:"2022 – 2024",h:"MA, Sociology",p:"Centre for the Study of Social Systems, Jawaharlal Nehru University, New Delhi"},
+ {w:"2019 – 2023",h:"BA (Hons), Sociology",p:"Department of Sociology, Raiganj University, West Bengal",g:"First Class First · Gold Medallist"}
+];
+$('#g-edu').innerHTML=edu.map(e=>`<div class="stop"><div class="yr2">${e.w}</div><h3>${e.h}</h3><p>${e.p}</p>${e.g?`<span class="gold">${e.g}</span>`:''}</div>`).join('');
+const quals=[{b:"NET-JRF",s:"UGC National Eligibility Test with Junior Research Fellowship, July 2023"},{b:"SET",s:"West Bengal State Eligibility Test, March 2023"},{b:"NVivo",s:"Research Methodology for Qualitative Study, Amity University Patna, 2024"}];
+$('#g-qual').innerHTML=quals.map(q=>`<div class="ql"><b>${q.b}</b><span>${q.s}</span></div>`).join('');
+const card=(c,i,col)=>`<div class="pc"><div class="ic" style="background:${col}">${c.i}</div><h3>${c.h}</h3><p>${c.p}</p></div>`;
+const teach=[{i:"I",h:"Introduction to Sociology",p:"Foundations of the discipline: society, culture, institutions and the sociological imagination."},{i:"P",h:"Perspectives in Sociology",p:"Major ways of seeing society, from functionalism and conflict to interaction."},{i:"III",h:"Theoretical Perspectives in Sociology",p:"Semester III, Course 3.3. Classical and modern theory, with individual student projects."},{i:"IS",h:"Indian Society",p:"Caste, class, kinship, religion and change in contemporary India."},{i:"V",h:"Sociology of Marginalised Communities",p:"Semester V, Course 5.5. How marginalisation is produced, drawing on Ambedkar, Marx and Uma Chakravarti."}];
+const serv=[{i:"A",h:"Coordinator, AISHE portal",p:"Managing the university's returns to the All India Survey on Higher Education."},{i:"C",h:"World Consumer Rights Day",p:"Coordinated a sensitisation programme, 13 March 2025."},{i:"Y",h:"Inter-Zonal Youth Festival",p:"Member, Guest and Hospitality Committee."},{i:"7",h:"7th Convocation of KSLU",p:"Member, Guest and Hospitality Committee."}];
+const rev=[{i:"S",h:"Journal of Applied Social Science",p:"SAGE · reviewer since May 2025"},{i:"A",h:"Psychology of Men and Masculinity",p:"American Psychological Association · reviewer since June 2024"},{i:"U",h:"SPECTRUM",p:"Interdisciplinary undergraduate research journal, University of Alberta · reviewer since January 2024"}];
+const cols=["#4f6d8a","#a9606a","#5f8a77","#7d6f94","#b08a4a"];
+$('#g-teach').innerHTML=teach.map((c,i)=>card(c,i,cols[i%5])).join('');
+$('#g-serv').innerHTML=serv.map((c,i)=>card(c,i,cols[(i+1)%5])).join('');
+$('#g-rev').innerHTML=rev.map((c,i)=>card(c,i,cols[(i+2)%5])).join('');
+
+const tags=["Social stratification","Caste and identity","Politics of recognition","Discrimination","Sociological social psychology","Gender","Youth and aspiration","Social movements and protest","Development and social change"];
+$('#tags').innerHTML=tags.map(t=>`<li>${t}</li>`).join('');
+const mq=tags.map(t=>`<span>${t}</span>`).join('');
+$('#marq').innerHTML=mq+mq;
+
+/* ---------- name split ---------- */
+const h1=$('#name');
+h1.innerHTML=h1.textContent.split(' ').map(w=>`<span class="w">${[...w].map(c=>`<span class="c">${c}</span>`).join('')}</span>`).join(' ');
+
+/* ---------- rotating role ---------- */
+const roles=["sociologist","teacher of law students","researcher of caste and recognition","student of youth aspiration","writer of textbooks","YouTuber on philosophy"];
+const rot=$('#rot');
+if(!reduce){
+  let ri=0,ci=roles[0].length,del=true;
+  const tick=()=>{
+    const w=roles[ri];
+    if(del){ci--;rot.textContent=w.slice(0,ci);if(ci===0){del=false;ri=(ri+1)%roles.length}setTimeout(tick,ci===0?260:38)}
+    else{const n=roles[ri];ci++;rot.textContent=n.slice(0,ci);if(ci===n.length){del=true;setTimeout(tick,2100)}else setTimeout(tick,70)}
+  };
+  setTimeout(tick,2600);
+}
+
+/* ---------- kantha cloth ---------- */
+let seed=7;const rnd=()=>(seed=seed*16807%2147483647)/2147483647;
+const cloth=$('#cloth');
+const CW=1400,CH=820;
+cloth.setAttribute('viewBox',`0 0 ${CW} ${CH}`);
+cloth.setAttribute('preserveAspectRatio','xMaxYMid slice');
+const layers=[{c:"#8aa6bf",n:4},{c:"#b9a98a",n:3},{c:"#cf9aa1",n:3},{c:"#9dbba7",n:4},{c:"#8aa6bf",n:3},{c:"#c98a92",n:3},{c:"#b9a98a",n:4},{c:"#9dbba7",n:3}];
+const tot=layers.reduce((a,l)=>a+l.n,0)+layers.length;
+const gap=CH/tot;let y=gap*.8,rows='',bands='';
+layers.forEach((l,i)=>{
+  bands+=`<rect x="0" y="${(y-gap*.55).toFixed(1)}" width="${CW}" height="${(gap*(l.n+.1)).toFixed(1)}" class="${i%2?'b1':'b0'}"/>`;
+  for(let r=0;r<l.n;r++){
+    const amp=4+rnd()*6,ph=rnd()*6.28,dash=8+rnd()*5;
+    let d=`M-20 ${y.toFixed(1)}`;
+    for(let x=0;x<=CW+40;x+=35)d+=` L${x} ${(y+Math.sin(x/110+ph)*amp).toFixed(1)}`;
+    rows+=`<path class="row" data-dir="${i%2?1:-1}" d="${d}" fill="none" stroke="${l.c}" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="${dash.toFixed(1)} ${(dash*.75).toFixed(1)}" opacity="${(.6+rnd()*.35).toFixed(2)}"/>`;
+    y+=gap;
+  }
+  y+=gap;
+});
+let knots='';for(let k=0;k<50;k++)knots+=`<circle class="knot" cx="${(rnd()*CW).toFixed(0)}" cy="${(rnd()*CH).toFixed(0)}" r="${(1.8+rnd()*2).toFixed(1)}" fill="#c98a92" opacity=".7"/>`;
+const cross=(x0,y0,x1,y1,c,w)=>`<path class="cross" d="M${x0} ${y0} C ${x0+140} ${y0-90}, ${x1-160} ${y1+110}, ${x1} ${y1}" fill="none" stroke="${c}" stroke-width="${w}" stroke-linecap="round"/>`;
+cloth.innerHTML=bands+rows+knots+cross(620,860,1380,60,"#b5646e",4.5)+cross(760,880,1100,300,"#7e9bb5",2)+cross(980,900,1420,420,"#8fb09a",2)+cross(500,900,860,520,"#cf9aa1",2);
+
+/* ---------- thesis figure: many pathways, some branching beyond the institutional route ---------- */
+const ps=$('#paths');
+let travs=[];
+const drawPaths=()=>{
+  const W=ps.clientWidth,H=ps.clientHeight;if(!W||!H)return;
+  let s=11;const r=()=>(s=s*16807%2147483647)/2147483647;
+  let o=``;
+  const mid=H*.5;
+  o+=`<path d="M0 ${mid} H${W}" stroke="#7e9bb5" stroke-width="12" stroke-opacity=".22"/>`;
+  for(let i=0;i<16;i++){
+    const y0=H*(.12+r()*.76),y1=r()<.45?mid+(r()-.5)*20:H*(.06+r()*.88);
+    const c=y1>mid-14&&y1<mid+14?"#5f7f9c":(r()<.4?"#b5646e":"#7fa38c");
+    o+=`<path class="pth" d="M-10 ${y0.toFixed(0)} C ${(W*.35).toFixed(0)} ${y0.toFixed(0)}, ${(W*.55).toFixed(0)} ${y1.toFixed(0)}, ${W+10} ${y1.toFixed(0)}" fill="none" stroke="${c}" stroke-width="2.2" stroke-dasharray="7 6" opacity=".85"/>`;
+  }
+  ps.innerHTML=o+'<g id="trav"></g>';
+  const tg=ps.querySelector('#trav');
+  travs=[...ps.querySelectorAll('.pth')].filter((_,i)=>i%2===0).map((pth,i)=>{const L=pth.getTotalLength();const c=document.createElementNS('http://www.w3.org/2000/svg','circle');c.setAttribute('r',4.5);c.setAttribute('fill',pth.getAttribute('stroke'));c.setAttribute('stroke','var(--bg)');c.setAttribute('stroke-width','1.5');tg.appendChild(c);return{pth,L,c,t:Math.random(),v:.0006+Math.random()*.0012}});
+  if(reduce)travs.forEach(o=>{const q=o.pth.getPointAtLength(o.L*o.t);o.c.setAttribute('cx',q.x);o.c.setAttribute('cy',q.y)});
+};
+const roP=new ResizeObserver(drawPaths);roP.observe(ps);
+if(!reduce){const tick=()=>{for(const o of travs){o.t+=o.v;if(o.t>1)o.t=0;const q=o.pth.getPointAtLength(o.L*o.t);o.c.setAttribute('cx',q.x.toFixed(1));o.c.setAttribute('cy',q.y.toFixed(1))}requestAnimationFrame(tick)};requestAnimationFrame(tick)}
+
+/* ---------- network in stats band: homophily, ties, a cursor that pulls people together ---------- */
+const net=$('#net'),nx=net.getContext('2d');let nodes=[],mouse=null,netRaf=0;
+const GC=['#4f6d8a','#a9606a','#5f8a77'];
+const sizeNet=()=>{const r=net.getBoundingClientRect(),d=Math.min(devicePixelRatio||1,2);net.width=r.width*d;net.height=r.height*d;nx.setTransform(d,0,0,d,0,0);const n=Math.max(18,Math.round(r.width/26));nodes=Array.from({length:n},()=>({x:Math.random()*r.width,y:Math.random()*r.height,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35,g:Math.floor(Math.random()*3)}));drawNet()};
+const drawNet=()=>{const r=net.getBoundingClientRect(),W=r.width,H=r.height;nx.clearRect(0,0,W,H);
+  for(const a of nodes){a.x+=a.vx;a.y+=a.vy;if(a.x<0||a.x>W)a.vx*=-1;if(a.y<0||a.y>H)a.vy*=-1;
+    if(mouse){const dx=mouse.x-a.x,dy=mouse.y-a.y,dd=Math.hypot(dx,dy);if(dd<160&&dd>20){a.x+=dx/dd*.9;a.y+=dy/dd*.9}}}
+  for(let i=0;i<nodes.length;i++)for(let j=i+1;j<nodes.length;j++){const a=nodes[i],b=nodes[j],dd=Math.hypot(a.x-b.x,a.y-b.y),same=a.g===b.g,lim=same?120:70;
+    if(dd<lim){nx.strokeStyle=same?GC[a.g]:'#9aa0b0';nx.globalAlpha=(1-dd/lim)*(same?.55:.3);nx.lineWidth=same?1.4:1;nx.setLineDash(same?[]:[3,4]);nx.beginPath();nx.moveTo(a.x,a.y);nx.lineTo(b.x,b.y);nx.stroke()}}
+  nx.setLineDash([]);nx.globalAlpha=.85;
+  for(const a of nodes){nx.fillStyle=GC[a.g];nx.beginPath();nx.arc(a.x,a.y-3.5,2.6,0,6.3);nx.fill();nx.beginPath();nx.ellipse(a.x,a.y+3.5,3.6,4.2,0,Math.PI,0);nx.fill()}
+  nx.globalAlpha=1};
+const netLoop=()=>{drawNet();netRaf=requestAnimationFrame(netLoop)};
+const roN=new ResizeObserver(sizeNet);roN.observe(net);
+net.parentElement.addEventListener('pointermove',e=>{const r=net.getBoundingClientRect();mouse={x:e.clientX-r.left,y:e.clientY-r.top}});
+net.parentElement.addEventListener('pointerleave',()=>mouse=null);
+if(!reduce){const ioN=new IntersectionObserver(e=>{cancelAnimationFrame(netRaf);if(e[0].isIntersecting)netLoop()});ioN.observe(net)}
+
+/* ---------- walking crowd ---------- */
+const crowd=$('#crowd');let ws='';let cs=3;const cr=()=>(cs=cs*16807%2147483647)/2147483647;
+const fig=(c,h)=>`<svg viewBox="0 0 22 54" style="height:${h}px"><circle cx="11" cy="7" r="5" fill="${c}"/><path d="M5 16q6-4 12 0l1 18H4z" fill="${c}"/><line class="lg1" x1="11" y1="34" x2="11" y2="53" stroke="${c}" stroke-width="3.4" stroke-linecap="round"/><line class="lg2" x1="11" y1="34" x2="11" y2="53" stroke="${c}" stroke-width="3.4" stroke-linecap="round"/></svg>`;
+const wc=['#4f6d8a','#a9606a','#5f8a77','#7d6f94','#b08a4a','#3d5a75'];
+for(let i=0;i<14;i++){const dur=26+cr()*30,del=-cr()*dur,h=40+cr()*20,c=wc[i%wc.length],rev=cr()<.4,pair=cr()<.3;
+  const one=(off)=>`<div class="walker${rev?' rev':''}" style="animation-duration:${dur.toFixed(1)}s;animation-delay:${(del+off).toFixed(2)}s;--x0:${(cr()*90).toFixed(0)}vw;height:${h.toFixed(0)}px;bottom:${(4+cr()*10).toFixed(0)}px">${fig(c,h)}</div>`;
+  ws+=one(0);if(pair)ws+=one(-.9).replace(c,wc[(i+2)%wc.length])}
+crowd.innerHTML=ws;
+
+/* ---------- contact: people drift, then gather into conversations, then disperse ---------- */
+const cv=$('#sky'),cx=cv.getContext('2d');let pts=[],raf=0,phase=0,phaseT=0,circles=[];
+const sizeCv=()=>{const r=cv.getBoundingClientRect(),d=Math.min(devicePixelRatio||1,2);cv.width=r.width*d;cv.height=r.height*d;cx.setTransform(d,0,0,d,0,0);
+  circles=[{x:r.width*.12,y:r.height*.82},{x:r.width*.5,y:r.height*.86},{x:r.width*.9,y:r.height*.2}];
+  const n=Math.round(Math.min(48,r.width/22));
+  pts=Array.from({length:n},(_,i)=>{const k=i%3,m=Math.floor(i/3),per=Math.ceil(n/3),ang=m/per*Math.PI*2,rad=26+per*2.2;return{x:Math.random()*r.width,y:Math.random()*r.height,hx:Math.random()*r.width,hy:Math.random()*r.height,tx:circles[k].x+Math.cos(ang)*rad,ty:circles[k].y+Math.sin(ang)*rad,c:wc[k*2%wc.length]}});
+  drawCv()};
+const drawCv=()=>{const r=cv.getBoundingClientRect();cx.clearRect(0,0,r.width,r.height);
+  for(const p of pts){const gx=phase?p.tx:p.hx,gy=phase?p.ty:p.hy;p.x+=(gx-p.x)*.02;p.y+=(gy-p.y)*.02;
+    cx.fillStyle=p.c;cx.globalAlpha=.75;cx.beginPath();cx.arc(p.x,p.y-4,3,0,6.3);cx.fill();cx.beginPath();cx.ellipse(p.x,p.y+4,4.2,5,0,Math.PI,0);cx.fill()}
+  if(phase){cx.globalAlpha=.35;cx.strokeStyle='#a9606a';cx.setLineDash([4,5]);for(const c of circles){cx.beginPath();cx.arc(c.x,c.y,10,0,6.3);cx.stroke()}cx.setLineDash([])}
+  cx.globalAlpha=1};
+const loop=t=>{if(t-phaseT>5200){phaseT=t;phase^=1;if(!phase)pts.forEach(p=>{const r=cv.getBoundingClientRect();p.hx=Math.random()*r.width;p.hy=Math.random()*r.height})}drawCv();raf=requestAnimationFrame(loop)};
+const roC=new ResizeObserver(sizeCv);roC.observe(cv);
+if(!reduce){const ioC=new IntersectionObserver(e=>{cancelAnimationFrame(raf);if(e[0].isIntersecting)raf=requestAnimationFrame(loop)});ioC.observe(cv)}else{phase=1;setTimeout(()=>{pts.forEach(p=>{p.x=p.tx;p.y=p.ty});drawCv()},120)}
+
+/* ---------- portrait tilt ---------- */
+const por=$('#portrait');
+if(!reduce&&matchMedia('(pointer:fine)').matches){
+  $('.hero').addEventListener('mousemove',e=>{const r=por.getBoundingClientRect();const dx=(e.clientX-(r.left+r.width/2))/r.width,dy=(e.clientY-(r.top+r.height/2))/r.height;por.style.transform=`rotateY(${dx*8}deg) rotateX(${-dy*8}deg)`});
+  $('.hero').addEventListener('mouseleave',()=>por.style.transform='');
+}
+
+/* ---------- nav: progress + active link ---------- */
+const prog=$('#prog'),links=$$('#links a'),secs=links.map(a=>$(a.getAttribute('href')));
+const onScroll=()=>{const h=document.documentElement;prog.style.transform=`scaleX(${h.scrollTop/((h.scrollHeight-h.clientHeight)||1)})`;let cur=null;secs.forEach((s,i)=>{if(s&&s.getBoundingClientRect().top<140)cur=i});links.forEach((a,i)=>a.classList.toggle('on',i===cur))};
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+/* ---------- copy ---------- */
+const btn=$('#copy');
+btn.addEventListener('click',()=>{const done=t=>{btn.textContent=t;setTimeout(()=>btn.textContent='Copy email address',2200)};try{navigator.clipboard.writeText('buddha956380@gmail.com').then(()=>done('Copied ✓'),()=>done('Select the address to copy'))}catch(e){done('Select the address to copy')}});
+
+
+/* ---------- profile tabs ---------- */
+const tbtn=$$('#tabs [role=tab]'),tind=$('#tabind');
+const moveInd=b=>{tind.style.width=b.offsetWidth+'px';tind.style.transform=`translateX(${b.offsetLeft}px)`};
+const select=(b,focus)=>{
+  tbtn.forEach(x=>{const on=x===b;x.setAttribute('aria-selected',on);x.tabIndex=on?0:-1;$('#'+x.getAttribute('aria-controls')).hidden=!on});
+  moveInd(b);if(focus)b.focus();
+  const pn=$('#'+b.getAttribute('aria-controls'));
+  if(window.gsap&&!reduce){
+    window.gsap.fromTo(pn.querySelectorAll('.pintro,.pc,.stop,.ql,.pubs li,h4'),{y:22,opacity:0},{y:0,opacity:1,duration:.5,stagger:.06,ease:'power3.out',overwrite:true});
+    if(pn.id==='p-edu'){window.gsap.fromTo(pn.querySelector('.road'),{'--rs':0},{'--rs':1,duration:1,ease:'power2.inOut'})}
+  }
+};
+tbtn.forEach((b,i)=>{b.addEventListener('click',()=>select(b));b.addEventListener('keydown',e=>{let j=null;if(e.key==='ArrowRight')j=(i+1)%tbtn.length;if(e.key==='ArrowLeft')j=(i-1+tbtn.length)%tbtn.length;if(e.key==='Home')j=0;if(e.key==='End')j=tbtn.length-1;if(j!==null){e.preventDefault();select(tbtn[j],true)}})});
+const roT=new ResizeObserver(()=>moveInd(tbtn.find(x=>x.getAttribute('aria-selected')==='true')));roT.observe($('#tabs'));
+
+/* ---------- GSAP motion ---------- */
+if(window.gsap&&!reduce){
+  const g=window.gsap;
+  if(window.ScrollTrigger)g.registerPlugin(window.ScrollTrigger);
+  const tl=g.timeline({defaults:{ease:'power3.out'}});
+  tl.from('.hello',{y:20,opacity:0,duration:.6})
+    .from('#name .c',{yPercent:110,duration:.8,stagger:.035},'-=.3')
+    .from('.rot,.lead',{y:24,opacity:0,duration:.7,stagger:.12},'-=.4')
+    .from('.btns .btn',{y:20,opacity:0,duration:.5,stagger:.08},'-=.4')
+    .from('.hero .ids a',{y:12,opacity:0,duration:.4,stagger:.07},'-=.2')
+    .from('.portrait .frame',{clipPath:'inset(100% 0 0 0)',duration:1.1,ease:'power4.inOut'},.2)
+    .from('.portrait .tag',{scale:.6,opacity:0,duration:.6,stagger:.15,ease:'back.out(2)'},'-=.3');
+  /* stitch frame sews itself, then keeps marching */
+  g.from('.portrait .ring',{scale:.9,opacity:0,duration:1,delay:.6,ease:'power3.out'});
+  /* cloth rows flow, crossing threads draw */
+  $$('#cloth .row').forEach(p=>g.to(p,{strokeDashoffset:p.dataset.dir*140,duration:12+Math.random()*10,repeat:-1,ease:'none'}));
+  $$('#cloth .cross').forEach((p,i)=>{const L=p.getTotalLength();g.fromTo(p,{strokeDasharray:L,strokeDashoffset:L},{strokeDashoffset:0,duration:2.4,delay:.5+i*.35,ease:'power2.inOut'})});
+  g.to('#cloth .knot',{opacity:.25,duration:1.6,stagger:{each:.06,repeat:-1,yoyo:true}});
+  if(window.ScrollTrigger){
+    g.to('#cloth',{yPercent:12,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
+    $$('.stats b[data-count]').forEach(b=>{const n=+b.dataset.count,o={v:0};g.to(o,{v:n,duration:1.4,ease:'power2.out',onUpdate:()=>b.textContent=Math.round(o.v),scrollTrigger:{trigger:b,start:'top 92%',once:true}})});
+    $$('.rv-group').forEach(grp=>g.from(grp.querySelectorAll('.rv'),{y:36,opacity:0,duration:.75,stagger:.1,ease:'power3.out',scrollTrigger:{trigger:grp,start:'top 88%',once:true}}));
+    $$('.rv-solo').forEach(el=>g.from(el,{y:24,opacity:0,duration:.6,scrollTrigger:{trigger:el,start:'top 90%',once:true}}));
+    $$('.thesis.rv').forEach(el=>g.from(el,{y:40,opacity:0,duration:.8,scrollTrigger:{trigger:el,start:'top 88%',once:true}}));
+    $$('.sec-head h2,.phead h2').forEach(el=>g.from(el,{x:-30,opacity:0,duration:.7,scrollTrigger:{trigger:el,start:'top 90%',once:true}}));
+    $$('#paths').forEach(el=>ScrollTrigger.create({trigger:el,start:'top 85%',once:true,onEnter:()=>{$$('#paths .pth').forEach((p,i)=>{const L=p.getTotalLength();g.fromTo(p,{strokeDasharray:L,strokeDashoffset:L},{strokeDashoffset:0,duration:1.6,delay:i*.07,ease:'power2.out',onComplete:()=>{p.style.strokeDasharray='7 6';g.to(p,{strokeDashoffset:-130,duration:8,repeat:-1,ease:'none'})}})})}}));
+  }
+}
+}
+</script>
+</body>
+</html>
