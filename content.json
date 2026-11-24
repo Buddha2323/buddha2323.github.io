@@ -1,0 +1,345 @@
+{
+ "site": {
+  "name": "Buddha Dev Biswas",
+  "greeting": "Namaskar, I am",
+  "roles": [
+   "sociologist",
+   "teacher of law students",
+   "researcher of caste and recognition",
+   "student of youth aspiration",
+   "writer of textbooks",
+   "YouTuber on philosophy"
+  ],
+  "bio": "I teach sociology at Karnataka State Law University, Hubballi, and I am a doctoral researcher at the Institute for Social and Economic Change, Bengaluru. I study how caste and identity are claimed, recognised and lived; how young people come to want the lives they want; and how publics decide whether a protest is legitimate.",
+  "photo": "photo.jpg",
+  "photo_label_1": {
+   "title": "Assistant Professor",
+   "subtitle": "Sociology, KSLU Hubballi"
+  },
+  "photo_label_2": {
+   "title": "PhD researcher",
+   "subtitle": "ISEC Bengaluru"
+  }
+ },
+ "links": {
+  "email": "buddha956380@gmail.com",
+  "orcid": "https://orcid.org/0000-0002-8084-0653",
+  "google_scholar": "https://scholar.google.com/citations?user=2TCK3WkAAAAJ&hl=en",
+  "scopus": "https://www.scopus.com/authid/detail.uri?authorId=59955972100",
+  "web_of_science": "https://www.webofscience.com/wos/author/record/LBH-8418-2024"
+ },
+ "stats": [
+  {
+   "number": 4,
+   "label": "published articles and chapters"
+  },
+  {
+   "number": 4,
+   "label": "textbooks in preparation"
+  },
+  {
+   "number": 3,
+   "label": "journals I review for"
+  },
+  {
+   "number": 4,
+   "label": "conference papers presented"
+  }
+ ],
+ "profile": {
+  "intro": "Choose a tab to see one part of my academic life at a time.",
+  "teaching": {
+   "highlight": "Since Oct 2024",
+   "title": "Assistant Professor (Sociology)",
+   "text": "Karnataka State Law University, Hubballi. I teach sociology to BA LLB students, connecting social theory and Indian society to questions of law and justice.",
+   "courses": [
+    {
+     "badge": "I",
+     "title": "Introduction to Sociology",
+     "text": "Foundations of the discipline: society, culture, institutions and the sociological imagination."
+    },
+    {
+     "badge": "P",
+     "title": "Perspectives in Sociology",
+     "text": "Major ways of seeing society, from functionalism and conflict to interaction."
+    },
+    {
+     "badge": "III",
+     "title": "Theoretical Perspectives in Sociology",
+     "text": "Semester III, Course 3.3. Classical and modern theory, with individual student projects."
+    },
+    {
+     "badge": "IS",
+     "title": "Indian Society",
+     "text": "Caste, class, kinship, religion and change in contemporary India."
+    },
+    {
+     "badge": "V",
+     "title": "Sociology of Marginalised Communities",
+     "text": "Semester V, Course 5.5. How marginalisation is produced, drawing on Ambedkar, Marx and Uma Chakravarti."
+    }
+   ]
+  },
+  "service": {
+   "highlight": "KSLU",
+   "title": "Serving the university",
+   "text": "Administrative and event responsibilities alongside teaching.",
+   "roles": [
+    {
+     "badge": "A",
+     "title": "Coordinator, AISHE portal",
+     "text": "Managing the university's returns to the All India Survey on Higher Education."
+    },
+    {
+     "badge": "C",
+     "title": "World Consumer Rights Day",
+     "text": "Coordinated a sensitisation programme, 13 March 2025."
+    },
+    {
+     "badge": "Y",
+     "title": "Inter-Zonal Youth Festival",
+     "text": "Member, Guest and Hospitality Committee."
+    },
+    {
+     "badge": "7",
+     "title": "7th Convocation of KSLU",
+     "text": "Member, Guest and Hospitality Committee."
+    }
+   ]
+  },
+  "education": {
+   "degrees": [
+    {
+     "years": "2025 – now",
+     "degree": "PhD, Development Studies",
+     "institution": "Institute for Social and Economic Change, Bengaluru",
+     "award": ""
+    },
+    {
+     "years": "2022 – 2024",
+     "degree": "MA, Sociology",
+     "institution": "Centre for the Study of Social Systems, Jawaharlal Nehru University, New Delhi",
+     "award": ""
+    },
+    {
+     "years": "2019 – 2023",
+     "degree": "BA (Hons), Sociology",
+     "institution": "Department of Sociology, Raiganj University, West Bengal",
+     "award": "First Class First · Gold Medallist"
+    }
+   ],
+   "qualifications": [
+    {
+     "short": "NET-JRF",
+     "detail": "UGC National Eligibility Test with Junior Research Fellowship, July 2023"
+    },
+    {
+     "short": "SET",
+     "detail": "West Bengal State Eligibility Test, March 2023"
+    },
+    {
+     "short": "NVivo",
+     "detail": "Research Methodology for Qualitative Study, Amity University Patna, 2024"
+    }
+   ]
+  },
+  "peer_review": {
+   "highlight": "3 journals",
+   "title": "Reviewing for journals",
+   "text": "I review manuscripts in sociology, psychology and interdisciplinary research.",
+   "journals": [
+    {
+     "badge": "S",
+     "title": "Journal of Applied Social Science",
+     "text": "SAGE · reviewer since May 2025"
+    },
+    {
+     "badge": "A",
+     "title": "Psychology of Men and Masculinity",
+     "text": "American Psychological Association · reviewer since June 2024"
+    },
+    {
+     "badge": "U",
+     "title": "SPECTRUM",
+     "text": "Interdisciplinary undergraduate research journal, University of Alberta · reviewer since January 2024"
+    }
+   ]
+  },
+  "talks": {
+   "highlight": "4 papers",
+   "title": "Conference presentations",
+   "text": "Papers presented at national conferences and seminars, 2023–2024.",
+   "items": [
+    {
+     "year": "2024",
+     "title": "The construction of virtual identity: analysing presentation of self through tags and trends",
+     "venue": "Department of Sociology, Jamia Millia Islamia, New Delhi"
+    },
+    {
+     "year": "2023",
+     "title": "The identity paradox: a distorted concept of self-expression",
+     "venue": "48th All India Sociological Conference, VIT Vellore"
+    },
+    {
+     "year": "2023",
+     "title": "Towards a holistic approach: fostering interdisciplinary sustainability education",
+     "venue": "13th National Conference on Transforming Higher Education for Sustainable Development"
+    },
+    {
+     "year": "2023",
+     "title": "Guardians of sustainability: women's role in India's indigenous knowledge system",
+     "venue": "ICSSR-sponsored National Seminar on Indigenous Knowledge Systems"
+    }
+   ]
+  }
+ },
+ "research": {
+  "intro": "How categories of identity become consequential, and how people live with, use and contest them.",
+  "thesis": {
+   "label": "Doctoral research · ISEC, Bengaluru",
+   "title": "Aspiration as Orientation: Youth and Their Futures Through and Beyond Educational and Occupational Pathways",
+   "text": "Policy and research often read aspiration as a destination: a degree, a job, a rank. This study asks what that reading leaves out. It treats aspiration as an orientation toward a life a young person has reason to value, and follows how that orientation forms, how it relates to educational and occupational plans, and how social position shapes the ways it can be pursued.",
+   "details": [
+    "Biographical narrative interviews",
+    "Young adults, 18–29",
+    "Supervisor: Dr Sobin George"
+   ]
+  },
+  "published_intro": "Journal articles and a book chapter. Click a page to open it.",
+  "publications": [
+   {
+    "journal": "Social Identities",
+    "issue": "2026, 1–12",
+    "type": "Article",
+    "title": "The politics of recognition: the role of identity in social mobility among marginalised communities in India",
+    "doi": "10.1080/13504630.2026.2682888",
+    "publisher": "Taylor & Francis",
+    "colour": "#2c6e75"
+   },
+   {
+    "journal": "Asian Affairs",
+    "issue": "2025, Vol. 56, No. 2, 308–326",
+    "type": "Article",
+    "title": "Navigating Caste, Affirmative Action and Identity in Contemporary India: A Sociological Study of Kudmi-Mahato Migrants in North Bengal",
+    "doi": "10.1080/03068374.2025.2482790",
+    "publisher": "Taylor & Francis",
+    "colour": "#8a3446"
+   },
+   {
+    "journal": "Economic & Political Weekly",
+    "issue": "2025, Vol. 60, Issue No. 32",
+    "type": "Article",
+    "title": "Rethinking the Identity Shift",
+    "doi": "10.71279/epw.v60i32.45263",
+    "publisher": "Sameeksha Trust",
+    "colour": "#b4412f"
+   },
+   {
+    "journal": "Indigenous Knowledge System: A Leading Way to Sustainability",
+    "issue": "2024, pp. 141–151",
+    "type": "Book chapter · ed. A. K. Pandey",
+    "title": "Guardians of Sustainability: Women's Role in India's Indigenous Knowledge System",
+    "doi": "",
+    "publisher": "IBRJ Publications",
+    "colour": "#5b4a86"
+   }
+  ],
+  "in_progress_intro": "Manuscripts currently in revision, under review or in development.",
+  "in_progress": [
+   {
+    "status": "In revision",
+    "title": "The Negotiated–Embodied Caste: Mobility, Recognition and the Asymmetric Marking of Caste in Contemporary India",
+    "text": "A framework for why caste persists: it is embedded in bodies, perception and bureaucratic identity, yet that embeddedness is continually negotiated through mobility and state recognition.",
+    "coauthors": ""
+   },
+   {
+    "status": "Under review",
+    "title": "The Two Archives",
+    "text": "How caste identity is held in two registers, the social and the documentary, and why documentary claims tend to move in one direction only. Draws on Kudmi-Mahato fieldwork.",
+    "coauthors": ""
+   },
+   {
+    "status": "Under review",
+    "title": "Public reasoning about the legitimacy of protest",
+    "text": "A qualitative study of how members of the public judged whether the 2026 NEET protest in India was legitimate, read through online discourse.",
+    "coauthors": "With Sagar Prasad (ISEC)"
+   },
+   {
+    "status": "In development",
+    "title": "Recognising the Other: a gateway mechanism of discrimination",
+    "text": "Why the same prejudiced person discriminates in one situation and not another. The paper argues that categorical identification of the other is a condition for prejudice to become practice, and plans classroom experiments to test it.",
+    "coauthors": ""
+   }
+  ],
+  "specialisations": [
+   "Social stratification",
+   "Caste and identity",
+   "Politics of recognition",
+   "Discrimination",
+   "Sociological social psychology",
+   "Gender",
+   "Youth and aspiration",
+   "Social movements and protest",
+   "Development and social change"
+  ]
+ },
+ "books": {
+  "title": "Books in progress",
+  "intro": "Four textbooks for the BA LLB sociology curriculum, currently being written. None is published yet.",
+  "label": "In progress",
+  "items": [
+   {
+    "title": "From Custom to Constitution",
+    "subtitle": "Sociology for law students, Semester II",
+    "footer": "with Dr Rangaswamy D",
+    "colour": "#4f6d8a"
+   },
+   {
+    "title": "Challenges of Indian Society",
+    "subtitle": "A sociological perspective for law students",
+    "footer": "Semester IV",
+    "colour": "#a9606a"
+   },
+   {
+    "title": "Society at the Margins",
+    "subtitle": "A sociological introduction to marginalised communities",
+    "footer": "Semester V",
+    "colour": "#5f8a77"
+   },
+   {
+    "title": "Questioning the Obvious",
+    "subtitle": "An introduction to sociology",
+    "footer": "Buddha Dev Biswas",
+    "colour": "#7d6f94"
+   }
+  ],
+  "note": "These books are being written and are not yet published. Each chapter pairs sociological ideas with Indian cases and short \"Law in Focus\" discussions."
+ },
+ "beyond": {
+  "intro": "Sociology and philosophy for people who are not (yet) sociologists.",
+  "items": [
+   {
+    "title": "Paradoxes of Being",
+    "text": "A YouTube channel in Hinglish that starts from questions people ask themselves and works through them with a text, from Bhagat Singh's \"Why I Am an Atheist\" to common myths about philosophical ideas.",
+    "link": "",
+    "link_text": "",
+    "style": "video"
+   },
+   {
+    "title": "UGC NET Test Series",
+    "text": "A test-series platform for UGC NET aspirants in Sociology and Paper 1, with free diagnostics, unit-wise sets, full mocks and explanations written to teach the reasoning.",
+    "link": "https://lambent-blini-372bc9.netlify.app",
+    "link_text": "Visit the test series →",
+    "style": "tests"
+   }
+  ]
+ },
+ "contact": {
+  "title": "Let's talk",
+  "text": "I welcome conversations about collaboration, invited talks, guest lectures and research on caste, identity, aspiration and protest."
+ },
+ "footer": {
+  "left": "© 2026 Buddha Dev Biswas",
+  "right": "Hubballi and Bengaluru, Karnataka"
+ }
+}

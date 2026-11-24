@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Website editor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light dark;--bg:light-dark(#fbfaf7,#14171c);--card:light-dark(#ffffff,#1b1f27);--ink:light-dark(#252838,#ebe9e4);--soft:light-dark(#5e6274,#aaacb8);--rule:light-dark(#e4e1d8,#2a2e38);--deep:light-dark(#3d5a75,#a9c4dc);--mad:light-dark(#a9505c,#e8a1a8);--ok:light-dark(#2f7a52,#7fd0a3);--band:light-dark(#e9f0ed,#182226)}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "DM Sans",system-ui,sans-serif}
+h1,h2{font-family:Newsreader,Georgia,serif;font-weight:500;letter-spacing:-.01em;margin:0}
+.top{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
+.top .in{max-width:980px;margin:0 auto;padding:12px 16px;display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center}
+.top h1{font-size:24px;margin-right:auto}
+.wrap{max-width:980px;margin:0 auto;padding:20px 16px 80px}
+button,.btn{font:600 15px "DM Sans",system-ui,sans-serif;border-radius:999px;min-height:42px;padding:0 18px;border:1.5px solid var(--deep);background:transparent;color:var(--deep);cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+button.primary{background:var(--deep);color:var(--bg)}
+button:disabled{opacity:.45;cursor:not-allowed}
+button.small{min-height:32px;padding:0 10px;font-size:13px;border-width:1px}
+button.danger{border-color:var(--mad);color:var(--mad)}
+button:focus-visible,input:focus-visible,textarea:focus-visible,summary:focus-visible{outline:2px solid var(--mad);outline-offset:2px}
+#status{font-size:14px;color:var(--soft);width:100%}
+#status.ok{color:var(--ok)}#status.err{color:var(--mad)}
+.panel{background:var(--card);border:1px solid var(--rule);border-radius:14px;padding:18px;margin-bottom:16px}
+.panel h2{font-size:22px;margin-bottom:6px}
+.help{color:var(--soft);font-size:14.5px;margin:0 0 12px}
+.help ol{margin:6px 0 0;padding-left:20px}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+label.f{display:block;margin:12px 0 0}
+label.f>span{display:block;font-size:13.5px;font-weight:600;color:var(--soft);margin-bottom:4px}
+input[type=text],input[type=password],input[type=number],input[type=url],textarea{width:100%;font:16px/1.45 "DM Sans",system-ui,sans-serif;color:var(--ink);background:var(--bg);border:1px solid var(--rule);border-radius:10px;padding:9px 12px}
+textarea{resize:vertical;min-height:84px}
+input[type=color]{width:46px;height:40px;border:1px solid var(--rule);border-radius:8px;background:none;padding:2px}
+details.sec{background:var(--card);border:1px solid var(--rule);border-radius:14px;margin-bottom:12px}
+details.sec>summary{cursor:pointer;list-style:none;padding:16px 18px;font-family:Newsreader,Georgia,serif;font-size:21px;display:flex;justify-content:space-between;align-items:center}
+details.sec>summary::after{content:"+";font-family:"DM Sans";color:var(--soft)}
+details.sec[open]>summary::after{content:"–"}
+details.sec>.body{padding:0 18px 18px}
+fieldset{border:1px dashed var(--rule);border-radius:12px;margin:14px 0 0;padding:6px 14px 14px}
+legend{font-weight:600;color:var(--deep);padding:0 6px}
+.item{border:1px solid var(--rule);border-radius:12px;padding:10px 14px 14px;margin-top:10px;background:var(--bg)}
+.item-h{display:flex;flex-wrap:wrap;gap:6px;align-items:center;justify-content:space-between}
+.item-h b{font-size:14px;color:var(--soft);font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:60%}
+.strrow{display:flex;gap:6px;align-items:center;margin-top:8px}
+.add{margin-top:10px}
+.photo{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.photo img{width:96px;height:128px;object-fit:cover;border-radius:48px 48px 10px 10px;border:1px solid var(--rule)}
+.dirty{display:none;font-size:13px;color:var(--mad);font-weight:600}
+body.changed .dirty{display:inline}
+@media(max-width:600px){.top h1{font-size:20px;width:100%}}
+</style>
+</head>
+<body>
+<div class="top"><div class="in">
+  <h1>Website editor</h1>
+  <span class="dirty">Unsaved changes</span>
+  <a class="btn" id="view" href="./" target="_blank" rel="noopener">View site</a>
+  <button class="primary" id="save" disabled>Save &amp; publish</button>
+  <div id="status">Loading…</div>
+</div></div>
+
+<div class="wrap">
+  <section class="panel" id="conn">
+    <h2>1. Connect to GitHub</h2>
+    <p class="help">Only you can publish: saving needs your personal GitHub access key. It is kept only in this browser, never on the website. Visitors cannot change anything.</p>
+    <details class="help"><summary>How to get the access key (one time, 2 minutes)</summary>
+      <ol>
+        <li>Open <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">github.com/settings/personal-access-tokens/new</a> (signed in as yourself).</li>
+        <li>Token name: <i>website editor</i>. Expiration: 1 year (or what you prefer).</li>
+        <li>Repository access: <b>Only select repositories</b> → choose <b id="repoName"></b>.</li>
+        <li>Permissions → Repository permissions → <b>Contents: Read and write</b>.</li>
+        <li>Click <b>Generate token</b>, copy it, and paste it below.</li>
+      </ol>
+    </details>
+    <label class="f"><span>GitHub access key</span><input type="password" id="token" autocomplete="off" placeholder="github_pat_…"></label>
+    <div class="row" style="margin-top:10px">
+      <label class="row" style="gap:6px;font-size:14.5px"><input type="checkbox" id="remember" checked> Remember on this device</label>
+      <button id="connect">Connect</button>
+      <button class="small danger" id="forget">Forget key</button>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>2. Photo</h2>
+    <div class="photo">
+      <img id="pimg" alt="Current photo" src="photo.jpg">
+      <div>
+        <p class="help">Choose a new portrait. It is resized automatically and published when you click <b>Save &amp; publish</b>.</p>
+        <input type="file" id="pfile" accept="image/*">
+      </div>
+    </div>
+  </section>
+
+  <h2 style="margin:26px 0 10px;font-size:24px">3. Edit the content</h2>
+  <p class="help">Open a section, change any text, add or remove items with the buttons, then click <b>Save &amp; publish</b> at the top. The live site updates about one minute later.</p>
+  <div id="editor"></div>
+
+  <section class="panel" style="margin-top:20px">
+    <h2>Backup</h2>
+    <p class="help">Download a copy of all content before big changes, or restore one later.</p>
+    <div class="row"><button id="dl">Download backup</button><label class="btn" style="cursor:pointer">Restore from backup<input type="file" id="restore" accept=".json,application/json" hidden></label><button class="danger" id="discard">Discard unsaved changes</button></div>
+  </section>
+</div>
+
+<script>
+{
+const OWNER='Buddha2323',REPO='buddha2323.github.io',BRANCH='main',API=`https://api.github.com/repos/${OWNER}/${REPO}/contents/`;
+const $=s=>document.querySelector(s);
+document.getElementById('repoName').textContent=`${OWNER}/${REPO}`;
+let data=null,sha=null,newPhoto=null;
+const st=(t,c)=>{const s=$('#status');s.textContent=t;s.className=c||''};
+const store={get:k=>{try{return localStorage.getItem(k)}catch(e){return null}},set:(k,v)=>{try{localStorage.setItem(k,v)}catch(e){}},del:k=>{try{localStorage.removeItem(k)}catch(e){}}};
+const tokenEl=$('#token');tokenEl.value=store.get('gh_token')||'';
+const token=()=>tokenEl.value.trim();
+const b64enc=str=>{const b=new TextEncoder().encode(str);let s='';for(let i=0;i<b.length;i+=0x8000)s+=String.fromCharCode.apply(null,b.subarray(i,i+0x8000));return btoa(s)};
+const b64dec=b=>new TextDecoder().decode(Uint8Array.from(atob(b.replace(/\n/g,'')),c=>c.charCodeAt(0)));
+const hdr=()=>({'Accept':'application/vnd.github+json',...(token()?{'Authorization':'Bearer '+token()}:{})});
+const changed=v=>{document.body.classList.toggle('changed',v);$('#save').disabled=!v||!token()};
+
+const LABELS={site:'Opening section (name, bio, photo labels)',links:'Email and research profile links',stats:'Numbers strip',profile:'Academic profile tabs',research:'Research, publications and work in progress',books:'Books in progress',beyond:'Beyond the classroom',contact:'Contact section',footer:'Footer',
+ name:'Your name',greeting:'Greeting above your name',roles:'Rotating roles (after "a …")',bio:'Short biography',photo:'Photo file',photo_label_1:'Photo label 1',photo_label_2:'Photo label 2',title:'Title',subtitle:'Subtitle',
+ email:'Email address',orcid:'ORCID link',google_scholar:'Google Scholar link',scopus:'Scopus link',web_of_science:'Web of Science link',
+ number:'Number',label:'Label',intro:'Introduction line',teaching:'Teaching tab',service:'University service tab',education:'Education tab',peer_review:'Peer review tab',talks:'Talks tab',
+ highlight:'Big highlight text',text:'Text',courses:'Courses',badge:'Badge (1–3 letters)',roles_:'Roles',degrees:'Degrees',years:'Years',degree:'Degree',institution:'Institution',award:'Award (optional)',qualifications:'Qualifications',short:'Short name',detail:'Details',journals:'Journals',items:'Items',year:'Year',venue:'Venue',
+ thesis:'Doctoral thesis',details:'Details (small pills)',published_intro:'Published work: intro line',publications:'Published articles and chapters',journal:'Journal or book',issue:'Year, volume, pages',type:'Type (e.g. Article)',doi:'DOI (without https://doi.org/)',publisher:'Publisher',colour:'Accent colour',authors:'Authors (leave empty for just you)',
+ in_progress_intro:'Work in progress: intro line',in_progress:'Work in progress (manuscripts)',status:'Status (e.g. Under review)',coauthors:'Co-authors line (optional)',specialisations:'Areas of specialisation',
+ footer_:'Footer',note:'Note under the books',link:'Link (optional)',link_text:'Link text',style:'Picture style (video, tests or other)',left:'Left text',right:'Right text'};
+const lab=(k,path)=>(path.endsWith('service.roles')?'Roles':LABELS[k])||k.replace(/_/g,' ');
+const LONG=/^(bio|text|note|intro|published_intro|in_progress_intro)$/;
+const blank=v=>Array.isArray(v)?[]:v&&typeof v==='object'?Object.fromEntries(Object.entries(v).map(([k,x])=>[k,k==='colour'?x:blank(x)])):typeof v==='number'?0:'';
+const TEMPL={'research.publications':{journal:'',issue:'',type:'Article',title:'',authors:'',doi:'',publisher:'',colour:'#3d5a75'}};
+const itemTitle=o=>o&&(o.title||o.degree||o.journal||o.short||o.label||o.status)||'';
+
+function field(obj,key,path){
+  const v=obj[key];
+  if(Array.isArray(v))return listEl(obj,key,path);
+  if(v&&typeof v==='object'){const fs=document.createElement('fieldset');const lg=document.createElement('legend');lg.textContent=lab(key,path);fs.append(lg);for(const k of Object.keys(v))fs.append(field(v,k,path+'.'+k));return fs}
+  const l=document.createElement('label');l.className='f';const sp=document.createElement('span');sp.textContent=lab(key,path);l.append(sp);
+  let inp;
+  if(key==='colour'){const r=document.createElement('div');r.className='row';const c=document.createElement('input');c.type='color';c.value=/^#[0-9a-f]{6}$/i.test(v)?v:'#3d5a75';const t=document.createElement('input');t.type='text';t.value=v;t.style.maxWidth='140px';
+    c.oninput=()=>{obj[key]=c.value;t.value=c.value;changed(true)};t.oninput=()=>{obj[key]=t.value;if(/^#[0-9a-f]{6}$/i.test(t.value))c.value=t.value;changed(true)};r.append(c,t);l.append(r);return l}
+  if(typeof v==='number'){inp=document.createElement('input');inp.type='number';inp.value=v;inp.oninput=()=>{obj[key]=inp.value===''?0:Number(inp.value);changed(true)}}
+  else if(LONG.test(key)||String(v).length>90){inp=document.createElement('textarea');inp.value=v??'';inp.rows=Math.min(8,Math.max(3,Math.ceil(String(v).length/80)));inp.oninput=()=>{obj[key]=inp.value;changed(true)}}
+  else{inp=document.createElement('input');inp.type='text';inp.value=v??'';inp.oninput=()=>{obj[key]=inp.value;changed(true)}}
+  l.append(inp);return l;
+}
+function btn(t,cls,fn){const b=document.createElement('button');b.type='button';b.className='small '+(cls||'');b.textContent=t;b.onclick=fn;return b}
+function listEl(obj,key,path){
+  const arr=obj[key];const fs=document.createElement('fieldset');const lg=document.createElement('legend');lg.textContent=lab(key,path);fs.append(lg);
+  const redraw=()=>{fs.replaceWith(listEl(obj,key,path))};
+  const strings=arr.length?typeof arr[0]!=='object':!TEMPL[path]&&!['stats'].includes(key)&&/roles|details|specialisations/.test(key)&&!path.endsWith('service.roles');
+  arr.forEach((it,i)=>{
+    const ctr=[btn('↑','',()=>{if(i>0){[arr[i-1],arr[i]]=[arr[i],arr[i-1]];changed(true);redraw()}}),btn('↓','',()=>{if(i<arr.length-1){[arr[i+1],arr[i]]=[arr[i],arr[i+1]];changed(true);redraw()}}),btn('Remove','danger',()=>{if(confirmBox(`Remove this item?`)){arr.splice(i,1);changed(true);redraw()}})];
+    if(strings){const r=document.createElement('div');r.className='strrow';const t=document.createElement('input');t.type='text';t.value=it;t.oninput=()=>{arr[i]=t.value;changed(true)};r.append(t,...ctr);fs.append(r)}
+    else{const box=document.createElement('div');box.className='item';const h=document.createElement('div');h.className='item-h';const b=document.createElement('b');b.textContent=`${i+1}. ${itemTitle(it)}`;const cc=document.createElement('div');cc.className='row';cc.style.gap='6px';cc.append(...ctr);h.append(b,cc);box.append(h);
+      for(const k of Object.keys(it))box.append(field(it,k,path+'.'+k));fs.append(box)}
+  });
+  fs.append(Object.assign(btn('+ Add','add',()=>{arr.push(strings?'':JSON.parse(JSON.stringify(TEMPL[path]||blank(arr[arr.length-1]||{title:'',text:''}))));changed(true);redraw()}),{}));
+  return fs;
+}
+let confirmBox=m=>true;
+function render(){
+  const ed=$('#editor');ed.innerHTML='';
+  for(const k of Object.keys(data)){const d=document.createElement('details');d.className='sec';const s=document.createElement('summary');s.textContent=lab(k,k);const b=document.createElement('div');b.className='body';
+    const v=data[k];if(Array.isArray(v))b.append(listEl(data,k,k));else if(v&&typeof v==='object')for(const kk of Object.keys(v)){if(k==='site'&&kk==='photo')continue;b.append(field(v,kk,k+'.'+kk))}else b.append(field(data,k,k));
+    d.append(s,b);ed.append(d)}
+}
+async function load(){
+  st('Loading content…');
+  try{
+    if(token()){const r=await fetch(API+'content.json?ref='+BRANCH,{headers:hdr(),cache:'no-store'});if(!r.ok)throw new Error(r.status===401?'The access key was not accepted. Check it and try again.':r.status===404?'content.json not found, or the key lacks access to this repository.':'GitHub error '+r.status);const j=await r.json();sha=j.sha;data=JSON.parse(b64dec(j.content));st('Connected. Edit below, then Save & publish.','ok')}
+    else{const r=await fetch('content.json?v='+Date.now(),{cache:'no-store'});data=await r.json();st('Read-only: paste your GitHub access key above and click Connect to be able to publish.')}
+    newPhoto=null;changed(false);render();
+  }catch(e){st(e.message||String(e),'err')}
+}
+async function putFile(path,contentB64,message){
+  let cur=null;const g=await fetch(API+path+'?ref='+BRANCH,{headers:hdr(),cache:'no-store'});if(g.ok)cur=(await g.json()).sha;
+  const r=await fetch(API+path,{method:'PUT',headers:{...hdr(),'Content-Type':'application/json'},body:JSON.stringify({message,content:contentB64,branch:BRANCH,...(cur?{sha:cur}:{})})});
+  if(!r.ok){const t=await r.json().catch(()=>({}));throw new Error((t.message||('GitHub error '+r.status))+(r.status===403?' — the key needs "Contents: Read and write" for this repository.':''))}
+  return (await r.json()).content.sha;
+}
+$('#save').onclick=async()=>{
+  if(!token()){st('Paste your GitHub access key first.','err');return}
+  $('#save').disabled=true;st('Publishing…');
+  try{
+    if(newPhoto){await putFile('photo.jpg',newPhoto,'Update photo');data.site.photo='photo.jpg?v='+Date.now();newPhoto=null}
+    sha=await putFile('content.json',b64enc(JSON.stringify(data,null,1)+'\n'),'Update website content');
+    changed(false);st('Published ✓ The live site will show the changes in about a minute (refresh the page).','ok');
+  }catch(e){st('Could not publish: '+(e.message||e),'err');$('#save').disabled=false}
+};
+$('#connect').onclick=()=>{if($('#remember').checked&&token())store.set('gh_token',token());else store.del('gh_token');load()};
+$('#forget').onclick=()=>{store.del('gh_token');tokenEl.value='';changed(document.body.classList.contains('changed'));st('Access key forgotten on this device.')};
+tokenEl.oninput=()=>changed(document.body.classList.contains('changed'));
+$('#pfile').onchange=e=>{const f=e.target.files[0];if(!f)return;const img=new Image();img.onload=()=>{const W=600,H=800,c=document.createElement('canvas');c.width=W;c.height=H;const x=c.getContext('2d');const s=Math.max(W/img.width,H/img.height),w=img.width*s,h=img.height*s;x.drawImage(img,(W-w)/2,(H-h)*0.25,w,h);const url=c.toDataURL('image/jpeg',.85);$('#pimg').src=url;newPhoto=url.split(',')[1];changed(true);st('New photo ready. Click Save & publish.')};img.src=URL.createObjectURL(f)};
+$('#dl').onclick=()=>{if(!data)return;const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(data,null,1)],{type:'application/json'}));a.download='website-content-backup.json';a.click()};
+$('#restore').onchange=e=>{const f=e.target.files[0];if(!f)return;f.text().then(t=>{try{data=JSON.parse(t);render();changed(true);st('Backup loaded. Review it, then Save & publish.')}catch(err){st('That file is not a valid backup.','err')}})};
+$('#discard').onclick=()=>load();
+addEventListener('beforeunload',e=>{if(document.body.classList.contains('changed')){e.preventDefault();e.returnValue=''}});
+load();
+}
+</script>
+</body>
+</html>

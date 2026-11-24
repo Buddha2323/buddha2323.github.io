@@ -283,7 +283,7 @@ a.cover:hover .cv-go,a.cover:focus-visible .cv-go{opacity:1;transform:none}
 <body>
 <nav aria-label="Main">
   <div class="wrap">
-    <a class="me" href="#top"><i aria-hidden="true"></i>Buddha Dev Biswas</a>
+    <a class="me" href="#top"><i aria-hidden="true"></i><span data-k="site.name">Buddha Dev Biswas</span></a>
     <div class="links" id="links">
       <a href="#profile">Profile</a>
       <a href="#research">Research</a>
@@ -300,27 +300,22 @@ a.cover:hover .cv-go,a.cover:focus-visible .cv-go{opacity:1;transform:none}
   <svg id="cloth" aria-hidden="true"></svg>
   <div class="wrap">
     <div class="htext">
-      <p class="hello a-in">Namaskar, I am</p>
-      <h1 id="name">Buddha Dev Biswas</h1>
+      <p class="hello a-in" data-k="site.greeting">Namaskar, I am</p>
+      <h1 id="name" data-k="site.name">Buddha Dev Biswas</h1>
       <p class="rot a-in" aria-live="polite"><span>a </span><b id="rot">sociologist</b></p>
-      <p class="lead a-in">I teach sociology at Karnataka State Law University, Hubballi, and I am a doctoral researcher at the Institute for Social and Economic Change, Bengaluru. I study how caste and identity are claimed, recognised and lived; how young people come to want the lives they want; and how publics decide whether a protest is legitimate.</p>
+      <p class="lead a-in" data-k="site.bio"></p>
       <div class="btns a-in">
         <a class="btn solid" href="#research">Explore my research</a>
         <a class="btn" href="#publications">Publications</a>
         <a class="btn" href="#contact">Say hello</a>
       </div>
-      <div class="ids a-in" aria-label="Research profiles">
-        <a href="https://orcid.org/0000-0002-8084-0653"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#a6ce39"/><path d="M8 7.5v9M10.5 10v6.5h2.6a3.25 3.25 0 0 0 0-6.5z" stroke="#fff" stroke-width="1.6" fill="none"/><circle cx="8" cy="5.6" r="1" fill="#fff"/></svg>ORCID</a>
-        <a href="https://scholar.google.com/citations?user=2TCK3WkAAAAJ&amp;hl=en"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#4285f4"/><path d="M12 5 4.5 10.5h3.2A4.4 4.4 0 0 0 12 18a4.4 4.4 0 0 0 4.3-7.5h3.2z" fill="#fff"/></svg>Google Scholar</a>
-        <a href="https://www.scopus.com/authid/detail.uri?authorId=59955972100"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#e9711c"/><path d="M15.5 8.6c-.8-.9-2-1.4-3.4-1.4-2 0-3.3 1-3.3 2.4 0 3.2 6.8 1.9 6.8 5.1 0 1.5-1.4 2.6-3.6 2.6-1.5 0-2.8-.6-3.6-1.6" stroke="#fff" stroke-width="1.7" fill="none" stroke-linecap="round"/></svg>Scopus</a>
-        <a href="https://www.webofscience.com/wos/author/record/LBH-8418-2024"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#5e33bf"/><path d="M6 8l2.2 8 2-6 1.8 6 2-6 2 6L18 8" stroke="#fff" stroke-width="1.6" fill="none" stroke-linejoin="round" stroke-linecap="round"/></svg>Web of Science</a>
-      </div>
+      <div class="ids a-in" id="ids1" aria-label="Research profiles"></div>
     </div>
     <div class="portrait" id="portrait">
-      <div class="frame"><img src="photo.jpg" alt="Portrait of Buddha Dev Biswas"></div>
+      <div class="frame"><img id="photo" src="photo.jpg" alt="Portrait"></div>
       <span class="ring" aria-hidden="true"></span>
-      <div class="tag"><b>Assistant Professor</b>Sociology, KSLU Hubballi</div>
-      <div class="tag tag2"><b>PhD researcher</b>ISEC Bengaluru</div>
+      <div class="tag"><b data-k="site.photo_label_1.title"></b><span data-k="site.photo_label_1.subtitle"></span></div>
+      <div class="tag tag2"><b data-k="site.photo_label_2.title"></b><span data-k="site.photo_label_2.subtitle"></span></div>
     </div>
   </div>
   <div class="scrollcue" aria-hidden="true">scroll<i></i></div>
@@ -329,12 +324,7 @@ a.cover:hover .cv-go,a.cover:focus-visible .cv-go{opacity:1;transform:none}
 <section class="stats band" style="padding-block:34px" aria-label="At a glance">
   <canvas id="net" aria-hidden="true"></canvas>
   <span class="hint" aria-hidden="true">move your cursor through the network</span>
-  <div class="wrap">
-    <div><b data-count="4">4</b><span>published articles and chapters</span></div>
-    <div><b data-count="4">4</b><span>textbooks in preparation</span></div>
-    <div><b data-count="3">3</b><span>journals I review for</span></div>
-    <div><b data-count="4">4</b><span>conference papers presented</span></div>
-  </div>
+  <div class="wrap" id="statsw"></div>
 </section>
 <div class="marq" aria-hidden="true"><div class="row" id="marq"></div></div>
 
@@ -344,7 +334,7 @@ a.cover:hover .cv-go,a.cover:focus-visible .cv-go{opacity:1;transform:none}
   <div class="wrap">
     <div class="phead rv-solo">
       <h2>Academic profile</h2>
-      <p class="kicker">Choose a tab to see one part of my academic life at a time.</p>
+      <p class="kicker" data-k="profile.intro"></p>
     </div>
     <div class="tabs" role="tablist" aria-label="Academic profile" id="tabs">
       <button role="tab" id="t-teach" aria-controls="p-teach" aria-selected="true">Teaching</button>
@@ -356,12 +346,12 @@ a.cover:hover .cv-go,a.cover:focus-visible .cv-go{opacity:1;transform:none}
     </div>
 
     <div class="panel" role="tabpanel" id="p-teach" aria-labelledby="t-teach">
-      <div class="pintro"><div class="big">Since Oct 2024</div><div><h3>Assistant Professor (Sociology)</h3><p>Karnataka State Law University, Hubballi. I teach sociology to BA LLB students, connecting social theory and Indian society to questions of law and justice.</p></div></div>
+      <div class="pintro"><div class="big" data-k="profile.teaching.highlight"></div><div><h3 data-k="profile.teaching.title"></h3><p data-k="profile.teaching.text"></p></div></div>
       <div class="pgrid" id="g-teach"></div>
     </div>
 
     <div class="panel" role="tabpanel" id="p-serv" aria-labelledby="t-serv" hidden>
-      <div class="pintro"><div class="big">KSLU</div><div><h3>Serving the university</h3><p>Administrative and event responsibilities alongside teaching.</p></div></div>
+      <div class="pintro"><div class="big" data-k="profile.service.highlight"></div><div><h3 data-k="profile.service.title"></h3><p data-k="profile.service.text"></p></div></div>
       <div class="pgrid" id="g-serv"></div>
     </div>
 
@@ -372,12 +362,12 @@ a.cover:hover .cv-go,a.cover:focus-visible .cv-go{opacity:1;transform:none}
     </div>
 
     <div class="panel" role="tabpanel" id="p-rev" aria-labelledby="t-rev" hidden>
-      <div class="pintro"><div class="big">3 journals</div><div><h3>Reviewing for journals</h3><p>I review manuscripts in sociology, psychology and interdisciplinary research.</p></div></div>
+      <div class="pintro"><div class="big" data-k="profile.peer_review.highlight"></div><div><h3 data-k="profile.peer_review.title"></h3><p data-k="profile.peer_review.text"></p></div></div>
       <div class="pgrid" id="g-rev"></div>
     </div>
 
     <div class="panel" role="tabpanel" id="p-talk" aria-labelledby="t-talk" hidden>
-      <div class="pintro"><div class="big">4 papers</div><div><h3>Conference presentations</h3><p>Papers presented at national conferences and seminars, 2023–2024.</p></div></div>
+      <div class="pintro"><div class="big" data-k="profile.talks.highlight"></div><div><h3 data-k="profile.talks.title"></h3><p data-k="profile.talks.text"></p></div></div>
       <ol class="pubs" id="talks"></ol>
     </div>
   </div>
@@ -387,44 +377,22 @@ a.cover:hover .cv-go,a.cover:focus-visible .cv-go{opacity:1;transform:none}
   <div class="wrap sec-head">
     <div class="sticky">
       <h2>Research</h2>
-      <p class="kicker">How categories of identity become consequential, and how people live with, use and contest them.</p>
+      <p class="kicker" data-k="research.intro"></p>
     </div>
     <div>
       <article class="thesis rv">
         <div class="tx">
-          <div class="lbl">Doctoral research · ISEC, Bengaluru</div>
-          <h3>Aspiration as Orientation: Youth and Their Futures Through and Beyond Educational and Occupational Pathways</h3>
-          <p>Policy and research often read aspiration as a destination: a degree, a job, a rank. This study asks what that reading leaves out. It treats aspiration as an orientation toward a life a young person has reason to value, and follows how that orientation forms, how it relates to educational and occupational plans, and how social position shapes the ways it can be pursued.</p>
-          <div class="meta"><span>Biographical narrative interviews</span><span>Young adults, 18–29</span><span>Supervisor: Dr Sobin George</span></div>
+          <div class="lbl" data-k="research.thesis.label"></div>
+          <h3 data-k="research.thesis.title"></h3>
+          <p data-k="research.thesis.text"></p>
+          <div class="meta" id="tmeta"></div>
         </div>
         <div class="fig"><svg id="paths" aria-hidden="true"></svg></div>
       </article>
-      <div id="publications" class="subhead rv-solo"><h3 class="sub-h">Published work</h3><p>Journal articles and a book chapter. Click a page to open it. Full listings on <a href="https://scholar.google.com/citations?user=2TCK3WkAAAAJ&amp;hl=en">Google Scholar</a>, <a href="https://www.scopus.com/authid/detail.uri?authorId=59955972100">Scopus</a>, <a href="https://orcid.org/0000-0002-8084-0653">ORCID</a> and <a href="https://www.webofscience.com/wos/author/record/LBH-8418-2024">Web of Science</a>.</p></div>
+      <div id="publications" class="subhead rv-solo"><h3 class="sub-h">Published work</h3><p><span data-k="research.published_intro"></span> <span id="listings"></span></p></div>
       <div class="covers rv-group" id="covers"></div>
-      <div class="subhead rv-solo"><h3 class="sub-h">Work in progress</h3><p>Manuscripts currently in revision, under review or in development.</p></div>
-      <div class="mss rv-group">
-        <article class="ms rv">
-          <span class="chip">In revision</span>
-          <h3>The Negotiated–Embodied Caste: Mobility, Recognition and the Asymmetric Marking of Caste in Contemporary India</h3>
-          <p>A framework for why caste persists: it is embedded in bodies, perception and bureaucratic identity, yet that embeddedness is continually negotiated through mobility and state recognition.</p>
-        </article>
-        <article class="ms rv">
-          <span class="chip b">Under review</span>
-          <h3>The Two Archives</h3>
-          <p>How caste identity is held in two registers, the social and the documentary, and why documentary claims tend to move in one direction only. Draws on Kudmi-Mahato fieldwork.</p>
-        </article>
-        <article class="ms rv">
-          <span class="chip b">Under review</span>
-          <h3>Public reasoning about the legitimacy of protest</h3>
-          <p>A qualitative study of how members of the public judged whether the 2026 NEET protest in India was legitimate, read through online discourse.</p>
-          <span class="with">With Sagar Prasad (ISEC)</span>
-        </article>
-        <article class="ms rv">
-          <span class="chip">In development</span>
-          <h3>Recognising the Other: a gateway mechanism of discrimination</h3>
-          <p>Why the same prejudiced person discriminates in one situation and not another. The paper argues that categorical identification of the other is a condition for prejudice to become practice, and plans classroom experiments to test it.</p>
-        </article>
-      </div>
+      <div class="subhead rv-solo"><h3 class="sub-h">Work in progress</h3><p data-k="research.in_progress_intro"></p></div>
+      <div class="mss rv-group" id="mss"></div>
       <div class="subhead rv-solo"><h3 class="sub-h">Areas of specialisation</h3></div>
       <ul class="tags" id="tags" style="margin-top:0"></ul>
     </div>
@@ -436,12 +404,12 @@ a.cover:hover .cv-go,a.cover:focus-visible .cv-go{opacity:1;transform:none}
 <section class="band" id="books">
   <div class="wrap sec-head">
     <div class="sticky">
-      <h2>Books in progress</h2>
-      <p class="kicker">Four textbooks for the BA LLB sociology curriculum, currently being written. None is published yet.</p>
+      <h2 data-k="books.title"></h2>
+      <p class="kicker" data-k="books.intro"></p>
     </div>
     <div>
       <div class="shelf rv-group" id="shelf"></div>
-      <p class="shelf-note"><span class="wip">Work in progress</span> These books are being written and are not yet published. Each chapter pairs sociological ideas with Indian cases and short "Law in Focus" discussions.</p>
+      <p class="shelf-note"><span class="wip" data-k="books.label"></span> <span data-k="books.note"></span></p>
     </div>
   </div>
 </section>
@@ -451,22 +419,10 @@ a.cover:hover .cv-go,a.cover:focus-visible .cv-go{opacity:1;transform:none}
   <div class="wrap sec-head">
     <div class="sticky">
       <h2>Beyond the classroom</h2>
-      <p class="kicker">Sociology and philosophy for people who are not (yet) sociologists.</p>
+      <p class="kicker" data-k="beyond.intro"></p>
     </div>
     <div>
-      <div class="pub2 rv-group">
-        <article class="pcard yt rv">
-          <svg class="art" viewBox="0 0 200 200" aria-hidden="true"><circle cx="120" cy="80" r="70" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="6 6"/><circle cx="80" cy="80" r="70" fill="none" stroke="#b5646e" stroke-width="2"/><path d="M92 60v40l32-20z" fill="#b5646e"/></svg>
-          <h3>Paradoxes of Being</h3>
-          <p>A YouTube channel in Hinglish that starts from questions people ask themselves and works through them with a text, from Bhagat Singh's "Why I Am an Atheist" to common myths about philosophical ideas.</p>
-        </article>
-        <article class="pcard net rv">
-          <svg class="art" viewBox="0 0 200 200" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="60" y="30" width="110" height="140" rx="10" stroke-dasharray="7 6"/><path d="M82 70l10 10 20-22M82 110l10 10 20-22" /><path d="M124 72h28M124 112h28M124 150h28" stroke-opacity=".6"/></g></svg>
-          <h3>UGC NET Test Series</h3>
-          <p>A test-series platform for UGC NET aspirants in Sociology and Paper 1, with free diagnostics, unit-wise sets, full mocks and explanations written to teach the reasoning.</p>
-          <a href="https://lambent-blini-372bc9.netlify.app">Visit the test series →</a>
-        </article>
-      </div>
+      <div class="pub2 rv-group" id="beyond"></div>
     </div>
   </div>
 </section>
@@ -476,93 +432,85 @@ a.cover:hover .cv-go,a.cover:focus-visible .cv-go{opacity:1;transform:none}
   <canvas id="sky" aria-hidden="true"></canvas>
   <div class="wrap">
     <div>
-      <h2>Let's talk</h2>
-      <p>I welcome conversations about collaboration, invited talks, guest lectures and research on caste, identity, aspiration and protest.</p>
+      <h2 data-k="contact.title"></h2>
+      <p data-k="contact.text"></p>
     </div>
     <div>
-      <a class="mail" href="mailto:buddha956380@gmail.com">buddha956380@gmail.com</a><br>
+      <a class="mail" id="mail" href="#"></a><br>
       <button class="copy" id="copy" type="button">Copy email address</button>
-      <div class="ids" aria-label="Research profiles">
-        <a href="https://orcid.org/0000-0002-8084-0653"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#a6ce39"/><path d="M8 7.5v9M10.5 10v6.5h2.6a3.25 3.25 0 0 0 0-6.5z" stroke="#fff" stroke-width="1.6" fill="none"/><circle cx="8" cy="5.6" r="1" fill="#fff"/></svg>ORCID</a>
-        <a href="https://scholar.google.com/citations?user=2TCK3WkAAAAJ&amp;hl=en"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#4285f4"/><path d="M12 5 4.5 10.5h3.2A4.4 4.4 0 0 0 12 18a4.4 4.4 0 0 0 4.3-7.5h3.2z" fill="#fff"/></svg>Google Scholar</a>
-        <a href="https://www.scopus.com/authid/detail.uri?authorId=59955972100"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#e9711c"/><path d="M15.5 8.6c-.8-.9-2-1.4-3.4-1.4-2 0-3.3 1-3.3 2.4 0 3.2 6.8 1.9 6.8 5.1 0 1.5-1.4 2.6-3.6 2.6-1.5 0-2.8-.6-3.6-1.6" stroke="#fff" stroke-width="1.7" fill="none" stroke-linecap="round"/></svg>Scopus</a>
-        <a href="https://www.webofscience.com/wos/author/record/LBH-8418-2024"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#5e33bf"/><path d="M6 8l2.2 8 2-6 1.8 6 2-6 2 6L18 8" stroke="#fff" stroke-width="1.6" fill="none" stroke-linejoin="round" stroke-linecap="round"/></svg>Web of Science</a>
-      </div>
+      <div class="ids" id="ids2" aria-label="Research profiles"></div>
     </div>
   </div>
 </section>
-<footer><div class="wrap"><span>© 2026 Buddha Dev Biswas</span><span>Hubballi and Bengaluru, Karnataka</span></div></footer>
+<footer><div class="wrap"><span data-k="footer.left"></span><span data-k="footer.right"></span></div></footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script type="application/json" id="default-content">{"site": {"name": "Buddha Dev Biswas", "greeting": "Namaskar, I am", "roles": ["sociologist", "teacher of law students", "researcher of caste and recognition", "student of youth aspiration", "writer of textbooks", "YouTuber on philosophy"], "bio": "I teach sociology at Karnataka State Law University, Hubballi, and I am a doctoral researcher at the Institute for Social and Economic Change, Bengaluru. I study how caste and identity are claimed, recognised and lived; how young people come to want the lives they want; and how publics decide whether a protest is legitimate.", "photo": "photo.jpg", "photo_label_1": {"title": "Assistant Professor", "subtitle": "Sociology, KSLU Hubballi"}, "photo_label_2": {"title": "PhD researcher", "subtitle": "ISEC Bengaluru"}}, "links": {"email": "buddha956380@gmail.com", "orcid": "https://orcid.org/0000-0002-8084-0653", "google_scholar": "https://scholar.google.com/citations?user=2TCK3WkAAAAJ&hl=en", "scopus": "https://www.scopus.com/authid/detail.uri?authorId=59955972100", "web_of_science": "https://www.webofscience.com/wos/author/record/LBH-8418-2024"}, "stats": [{"number": 4, "label": "published articles and chapters"}, {"number": 4, "label": "textbooks in preparation"}, {"number": 3, "label": "journals I review for"}, {"number": 4, "label": "conference papers presented"}], "profile": {"intro": "Choose a tab to see one part of my academic life at a time.", "teaching": {"highlight": "Since Oct 2024", "title": "Assistant Professor (Sociology)", "text": "Karnataka State Law University, Hubballi. I teach sociology to BA LLB students, connecting social theory and Indian society to questions of law and justice.", "courses": [{"badge": "I", "title": "Introduction to Sociology", "text": "Foundations of the discipline: society, culture, institutions and the sociological imagination."}, {"badge": "P", "title": "Perspectives in Sociology", "text": "Major ways of seeing society, from functionalism and conflict to interaction."}, {"badge": "III", "title": "Theoretical Perspectives in Sociology", "text": "Semester III, Course 3.3. Classical and modern theory, with individual student projects."}, {"badge": "IS", "title": "Indian Society", "text": "Caste, class, kinship, religion and change in contemporary India."}, {"badge": "V", "title": "Sociology of Marginalised Communities", "text": "Semester V, Course 5.5. How marginalisation is produced, drawing on Ambedkar, Marx and Uma Chakravarti."}]}, "service": {"highlight": "KSLU", "title": "Serving the university", "text": "Administrative and event responsibilities alongside teaching.", "roles": [{"badge": "A", "title": "Coordinator, AISHE portal", "text": "Managing the university's returns to the All India Survey on Higher Education."}, {"badge": "C", "title": "World Consumer Rights Day", "text": "Coordinated a sensitisation programme, 13 March 2025."}, {"badge": "Y", "title": "Inter-Zonal Youth Festival", "text": "Member, Guest and Hospitality Committee."}, {"badge": "7", "title": "7th Convocation of KSLU", "text": "Member, Guest and Hospitality Committee."}]}, "education": {"degrees": [{"years": "2025 – now", "degree": "PhD, Development Studies", "institution": "Institute for Social and Economic Change, Bengaluru", "award": ""}, {"years": "2022 – 2024", "degree": "MA, Sociology", "institution": "Centre for the Study of Social Systems, Jawaharlal Nehru University, New Delhi", "award": ""}, {"years": "2019 – 2023", "degree": "BA (Hons), Sociology", "institution": "Department of Sociology, Raiganj University, West Bengal", "award": "First Class First · Gold Medallist"}], "qualifications": [{"short": "NET-JRF", "detail": "UGC National Eligibility Test with Junior Research Fellowship, July 2023"}, {"short": "SET", "detail": "West Bengal State Eligibility Test, March 2023"}, {"short": "NVivo", "detail": "Research Methodology for Qualitative Study, Amity University Patna, 2024"}]}, "peer_review": {"highlight": "3 journals", "title": "Reviewing for journals", "text": "I review manuscripts in sociology, psychology and interdisciplinary research.", "journals": [{"badge": "S", "title": "Journal of Applied Social Science", "text": "SAGE · reviewer since May 2025"}, {"badge": "A", "title": "Psychology of Men and Masculinity", "text": "American Psychological Association · reviewer since June 2024"}, {"badge": "U", "title": "SPECTRUM", "text": "Interdisciplinary undergraduate research journal, University of Alberta · reviewer since January 2024"}]}, "talks": {"highlight": "4 papers", "title": "Conference presentations", "text": "Papers presented at national conferences and seminars, 2023–2024.", "items": [{"year": "2024", "title": "The construction of virtual identity: analysing presentation of self through tags and trends", "venue": "Department of Sociology, Jamia Millia Islamia, New Delhi"}, {"year": "2023", "title": "The identity paradox: a distorted concept of self-expression", "venue": "48th All India Sociological Conference, VIT Vellore"}, {"year": "2023", "title": "Towards a holistic approach: fostering interdisciplinary sustainability education", "venue": "13th National Conference on Transforming Higher Education for Sustainable Development"}, {"year": "2023", "title": "Guardians of sustainability: women's role in India's indigenous knowledge system", "venue": "ICSSR-sponsored National Seminar on Indigenous Knowledge Systems"}]}}, "research": {"intro": "How categories of identity become consequential, and how people live with, use and contest them.", "thesis": {"label": "Doctoral research · ISEC, Bengaluru", "title": "Aspiration as Orientation: Youth and Their Futures Through and Beyond Educational and Occupational Pathways", "text": "Policy and research often read aspiration as a destination: a degree, a job, a rank. This study asks what that reading leaves out. It treats aspiration as an orientation toward a life a young person has reason to value, and follows how that orientation forms, how it relates to educational and occupational plans, and how social position shapes the ways it can be pursued.", "details": ["Biographical narrative interviews", "Young adults, 18–29", "Supervisor: Dr Sobin George"]}, "published_intro": "Journal articles and a book chapter. Click a page to open it.", "publications": [{"journal": "Social Identities", "issue": "2026, 1–12", "type": "Article", "title": "The politics of recognition: the role of identity in social mobility among marginalised communities in India", "doi": "10.1080/13504630.2026.2682888", "publisher": "Taylor & Francis", "colour": "#2c6e75"}, {"journal": "Asian Affairs", "issue": "2025, Vol. 56, No. 2, 308–326", "type": "Article", "title": "Navigating Caste, Affirmative Action and Identity in Contemporary India: A Sociological Study of Kudmi-Mahato Migrants in North Bengal", "doi": "10.1080/03068374.2025.2482790", "publisher": "Taylor & Francis", "colour": "#8a3446"}, {"journal": "Economic & Political Weekly", "issue": "2025, Vol. 60, Issue No. 32", "type": "Article", "title": "Rethinking the Identity Shift", "doi": "10.71279/epw.v60i32.45263", "publisher": "Sameeksha Trust", "colour": "#b4412f"}, {"journal": "Indigenous Knowledge System: A Leading Way to Sustainability", "issue": "2024, pp. 141–151", "type": "Book chapter · ed. A. K. Pandey", "title": "Guardians of Sustainability: Women's Role in India's Indigenous Knowledge System", "doi": "", "publisher": "IBRJ Publications", "colour": "#5b4a86"}], "in_progress_intro": "Manuscripts currently in revision, under review or in development.", "in_progress": [{"status": "In revision", "title": "The Negotiated–Embodied Caste: Mobility, Recognition and the Asymmetric Marking of Caste in Contemporary India", "text": "A framework for why caste persists: it is embedded in bodies, perception and bureaucratic identity, yet that embeddedness is continually negotiated through mobility and state recognition.", "coauthors": ""}, {"status": "Under review", "title": "The Two Archives", "text": "How caste identity is held in two registers, the social and the documentary, and why documentary claims tend to move in one direction only. Draws on Kudmi-Mahato fieldwork.", "coauthors": ""}, {"status": "Under review", "title": "Public reasoning about the legitimacy of protest", "text": "A qualitative study of how members of the public judged whether the 2026 NEET protest in India was legitimate, read through online discourse.", "coauthors": "With Sagar Prasad (ISEC)"}, {"status": "In development", "title": "Recognising the Other: a gateway mechanism of discrimination", "text": "Why the same prejudiced person discriminates in one situation and not another. The paper argues that categorical identification of the other is a condition for prejudice to become practice, and plans classroom experiments to test it.", "coauthors": ""}], "specialisations": ["Social stratification", "Caste and identity", "Politics of recognition", "Discrimination", "Sociological social psychology", "Gender", "Youth and aspiration", "Social movements and protest", "Development and social change"]}, "books": {"title": "Books in progress", "intro": "Four textbooks for the BA LLB sociology curriculum, currently being written. None is published yet.", "label": "In progress", "items": [{"title": "From Custom to Constitution", "subtitle": "Sociology for law students, Semester II", "footer": "with Dr Rangaswamy D", "colour": "#4f6d8a"}, {"title": "Challenges of Indian Society", "subtitle": "A sociological perspective for law students", "footer": "Semester IV", "colour": "#a9606a"}, {"title": "Society at the Margins", "subtitle": "A sociological introduction to marginalised communities", "footer": "Semester V", "colour": "#5f8a77"}, {"title": "Questioning the Obvious", "subtitle": "An introduction to sociology", "footer": "Buddha Dev Biswas", "colour": "#7d6f94"}], "note": "These books are being written and are not yet published. Each chapter pairs sociological ideas with Indian cases and short \"Law in Focus\" discussions."}, "beyond": {"intro": "Sociology and philosophy for people who are not (yet) sociologists.", "items": [{"title": "Paradoxes of Being", "text": "A YouTube channel in Hinglish that starts from questions people ask themselves and works through them with a text, from Bhagat Singh's \"Why I Am an Atheist\" to common myths about philosophical ideas.", "link": "", "link_text": "", "style": "video"}, {"title": "UGC NET Test Series", "text": "A test-series platform for UGC NET aspirants in Sociology and Paper 1, with free diagnostics, unit-wise sets, full mocks and explanations written to teach the reasoning.", "link": "https://lambent-blini-372bc9.netlify.app", "link_text": "Visit the test series →", "style": "tests"}]}, "contact": {"title": "Let's talk", "text": "I welcome conversations about collaboration, invited talks, guest lectures and research on caste, identity, aspiration and protest."}, "footer": {"left": "© 2026 Buddha Dev Biswas", "right": "Hubballi and Bengaluru, Karnataka"}}</script>
 <script>
-{
+(async()=>{let C;try{const r=await fetch('content.json?v='+Date.now(),{cache:'no-store'});if(!r.ok)throw 0;C=await r.json()}catch(e){C=JSON.parse(document.getElementById('default-content').textContent)}
+try{start(C)}catch(err){console.error(err)}})();
+function start(C){
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-/* ---------- content ---------- */
-const pubs=[
- {y:2026,t:"The politics of recognition: the role of identity in social mobility among marginalised communities in India",s:"<i>Social Identities</i>, 1–12",d:"10.1080/13504630.2026.2682888"},
- {y:2025,t:"Navigating caste, affirmative action and identity in contemporary India: a sociological study of Kudmi-Mahato migrants in North Bengal",s:"<i>Asian Affairs</i>, 56(2), 308–326",d:"10.1080/03068374.2025.2482790"},
- {y:2025,t:"Rethinking the identity shift",s:"<i>Economic and Political Weekly</i>, 60(32)",d:"10.71279/epw.v60i32.45263"},
- {y:2024,t:"Guardians of sustainability: women's role in India's indigenous knowledge system",s:"In A. K. Pandey (Ed.), <i>Indigenous Knowledge System: A Leading Way to Sustainability</i> (pp. 141–151). IBRJ Publications",d:""}
-];
-const jc={si:"#2c6e75",aa:"#8a3446",epw:"#b4412f",ch:"#5b4a86"};
-const fp=[
- {k:"si",j:"Social Identities",v:"2026, 1–12",kind:"Article",t:"The politics of recognition: the role of identity in social mobility among marginalised communities in India",d:"10.1080/13504630.2026.2682888",f:"Taylor & Francis"},
- {k:"aa",j:"Asian Affairs",v:"2025, Vol. 56, No. 2, 308–326",kind:"Article",t:"Navigating Caste, Affirmative Action and Identity in Contemporary India: A Sociological Study of Kudmi-Mahato Migrants in North Bengal",d:"10.1080/03068374.2025.2482790",f:"Taylor & Francis"},
- {k:"epw",j:"Economic & Political Weekly",v:"2025, Vol. 60, Issue No. 32",kind:"Article",t:"Rethinking the Identity Shift",d:"10.71279/epw.v60i32.45263",f:"Sameeksha Trust"},
- {k:"ch",j:"Indigenous Knowledge System: A Leading Way to Sustainability",v:"2024, pp. 141–151",kind:"Book chapter · ed. A. K. Pandey",t:"Guardians of Sustainability: Women's Role in India's Indigenous Knowledge System",d:"",f:"IBRJ Publications"}
-];
+/* ---------- content (from content.json) ---------- */
+const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const get=(o,p)=>p.split('.').reduce((x,k)=>x==null?x:x[k],o);
+const arr=v=>Array.isArray(v)?v:[];
+document.title=C.site.name||document.title;
+$$('[data-k]').forEach(el=>{const v=get(C,el.dataset.k);el.textContent=v==null?'':v});
+$('#photo').src=C.site.photo||'photo.jpg';$('#photo').alt='Portrait of '+(C.site.name||'');
+$$('.tag').forEach(t=>{if(!t.textContent.trim())t.style.display='none'});
+const L=C.links||{};
+const ICON={orcid:'<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#a6ce39"/><path d="M8 7.5v9M10.5 10v6.5h2.6a3.25 3.25 0 0 0 0-6.5z" stroke="#fff" stroke-width="1.6" fill="none"/><circle cx="8" cy="5.6" r="1" fill="#fff"/></svg>',
+ google_scholar:'<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#4285f4"/><path d="M12 5 4.5 10.5h3.2A4.4 4.4 0 0 0 12 18a4.4 4.4 0 0 0 4.3-7.5h3.2z" fill="#fff"/></svg>',
+ scopus:'<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#e9711c"/><path d="M15.5 8.6c-.8-.9-2-1.4-3.4-1.4-2 0-3.3 1-3.3 2.4 0 3.2 6.8 1.9 6.8 5.1 0 1.5-1.4 2.6-3.6 2.6-1.5 0-2.8-.6-3.6-1.6" stroke="#fff" stroke-width="1.7" fill="none" stroke-linecap="round"/></svg>',
+ web_of_science:'<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#5e33bf"/><path d="M6 8l2.2 8 2-6 1.8 6 2-6 2 6L18 8" stroke="#fff" stroke-width="1.6" fill="none" stroke-linejoin="round" stroke-linecap="round"/></svg>'};
+const NAMES={orcid:'ORCID',google_scholar:'Google Scholar',scopus:'Scopus',web_of_science:'Web of Science'};
+const idKeys=Object.keys(NAMES).filter(k=>L[k]);
+const idsHTML=idKeys.map(k=>`<a href="${esc(L[k])}">${ICON[k]}${NAMES[k]}</a>`).join('');
+$('#ids1').innerHTML=idsHTML;$('#ids2').innerHTML=idsHTML;
+const lk=idKeys.map(k=>`<a href="${esc(L[k])}">${NAMES[k]}</a>`);
+$('#listings').innerHTML=lk.length?'Full listings on '+(lk.length>1?lk.slice(0,-1).join(', ')+' and '+lk[lk.length-1]:lk[0])+'.':'';
+const mail=$('#mail');mail.textContent=L.email||'';mail.href='mailto:'+(L.email||'');
+$('#statsw').innerHTML=arr(C.stats).map(x=>`<div><b data-count="${parseInt(x.number)||0}">${esc(x.number)}</b><span>${esc(x.label)}</span></div>`).join('');
+const R=C.research||{};
+$('#tmeta').innerHTML=arr(R.thesis&&R.thesis.details).map(d=>`<span>${esc(d)}</span>`).join('');
 const bars=(n,w)=>Array.from({length:n},(_,i)=>`<i style="width:${i===n-1?w:100}%"></i>`).join('');
-$('#covers').innerHTML=fp.map(c=>{const inner=`<div class="cv-top"><div class="cv-j">${c.j}</div><div class="cv-v">${c.v}</div></div><div class="cv-kind">${c.kind}</div><h4 class="cv-t">${c.t}</h4><div class="cv-a">Buddha Dev Biswas</div><div class="cv-abs">Abstract</div><div class="lines">${bars(4,62)}</div><div class="cv-cols"><div class="lines">${bars(4,70)}</div><div class="lines">${bars(4,45)}</div></div><div class="cv-foot"><span>${c.f}</span>${c.d?`<b>doi.org/${c.d}</b>`:'<b>Edited volume</b>'}</div>`;return c.d?`<a class="cover rv" style="--jc:${jc[c.k]}" href="https://doi.org/${c.d}" aria-label="Open article: ${c.t}">${inner}<span class="cv-go">Read article →</span></a>`:`<div class="cover rv" style="--jc:${jc[c.k]}">${inner}</div>`}).join('');
+$('#covers').innerHTML=arr(R.publications).map(c=>{const col=esc(c.colour||'#3d5a75');const inner=`<div class="cv-top"><div class="cv-j">${esc(c.journal)}</div><div class="cv-v">${esc(c.issue)}</div></div><div class="cv-kind">${esc(c.type)}</div><h4 class="cv-t">${esc(c.title)}</h4><div class="cv-a">${esc(c.authors||C.site.name)}</div><div class="cv-abs">Abstract</div><div class="lines">${bars(4,62)}</div><div class="cv-cols"><div class="lines">${bars(4,70)}</div><div class="lines">${bars(4,45)}</div></div><div class="cv-foot"><span>${esc(c.publisher)}</span>${c.doi?`<b>doi.org/${esc(c.doi)}</b>`:'<b>Edited volume</b>'}</div>`;return c.doi?`<a class="cover rv" style="--jc:${col}" href="https://doi.org/${esc(c.doi)}" aria-label="Open article: ${esc(c.title)}">${inner}<span class="cv-go">Read article →</span></a>`:`<div class="cover rv" style="--jc:${col}">${inner}</div>`}).join('');
 $('#covers').insertAdjacentHTML('afterend','<p class="cov-note">The pages above are stylised previews of each article\'s first page; they open the publisher\'s version.</p>');
-
-const talks=[
- {y:2024,t:"The construction of virtual identity: analysing presentation of self through tags and trends",s:"Department of Sociology, Jamia Millia Islamia, New Delhi"},
- {y:2023,t:"The identity paradox: a distorted concept of self-expression",s:"48th All India Sociological Conference, VIT Vellore"},
- {y:2023,t:"Towards a holistic approach: fostering interdisciplinary sustainability education",s:"13th National Conference on Transforming Higher Education for Sustainable Development"},
- {y:2023,t:"Guardians of sustainability: women's role in India's indigenous knowledge system",s:"ICSSR-sponsored National Seminar on Indigenous Knowledge Systems"}
-];
-$('#talks').innerHTML=talks.map(p=>`<li class="rv"><span class="yr">${p.y}</span><div><h3>${p.t}</h3><div class="src">${p.s}</div></div></li>`).join('');
-
-const books=[
- {c:"bk1",t:"From Custom to Constitution",s:"Sociology for law students, Semester II",b:"with Dr Rangaswamy D"},
- {c:"bk2",t:"Challenges of Indian Society",s:"A sociological perspective for law students",b:"Semester IV"},
- {c:"bk3",t:"Society at the Margins",s:"A sociological introduction to marginalised communities",b:"Semester V"},
- {c:"bk4",t:"Questioning the Obvious",s:"An introduction to sociology",b:"Buddha Dev Biswas"}
-];
-$('#shelf').innerHTML=books.map(b=>`<div class="book ${b.c} rv"><span class="rib">In progress</span><div><h3>${b.t}</h3><div class="sub">${b.s}</div></div><div class="by">${b.b}</div></div>`).join('');
-
-const edu=[
- {w:"2025 – now",h:"PhD, Development Studies",p:"Institute for Social and Economic Change, Bengaluru"},
- {w:"2022 – 2024",h:"MA, Sociology",p:"Centre for the Study of Social Systems, Jawaharlal Nehru University, New Delhi"},
- {w:"2019 – 2023",h:"BA (Hons), Sociology",p:"Department of Sociology, Raiganj University, West Bengal",g:"First Class First · Gold Medallist"}
-];
-$('#g-edu').innerHTML=edu.map(e=>`<div class="stop"><div class="yr2">${e.w}</div><h3>${e.h}</h3><p>${e.p}</p>${e.g?`<span class="gold">${e.g}</span>`:''}</div>`).join('');
-const quals=[{b:"NET-JRF",s:"UGC National Eligibility Test with Junior Research Fellowship, July 2023"},{b:"SET",s:"West Bengal State Eligibility Test, March 2023"},{b:"NVivo",s:"Research Methodology for Qualitative Study, Amity University Patna, 2024"}];
-$('#g-qual').innerHTML=quals.map(q=>`<div class="ql"><b>${q.b}</b><span>${q.s}</span></div>`).join('');
-const card=(c,i,col)=>`<div class="pc"><div class="ic" style="background:${col}">${c.i}</div><h3>${c.h}</h3><p>${c.p}</p></div>`;
-const teach=[{i:"I",h:"Introduction to Sociology",p:"Foundations of the discipline: society, culture, institutions and the sociological imagination."},{i:"P",h:"Perspectives in Sociology",p:"Major ways of seeing society, from functionalism and conflict to interaction."},{i:"III",h:"Theoretical Perspectives in Sociology",p:"Semester III, Course 3.3. Classical and modern theory, with individual student projects."},{i:"IS",h:"Indian Society",p:"Caste, class, kinship, religion and change in contemporary India."},{i:"V",h:"Sociology of Marginalised Communities",p:"Semester V, Course 5.5. How marginalisation is produced, drawing on Ambedkar, Marx and Uma Chakravarti."}];
-const serv=[{i:"A",h:"Coordinator, AISHE portal",p:"Managing the university's returns to the All India Survey on Higher Education."},{i:"C",h:"World Consumer Rights Day",p:"Coordinated a sensitisation programme, 13 March 2025."},{i:"Y",h:"Inter-Zonal Youth Festival",p:"Member, Guest and Hospitality Committee."},{i:"7",h:"7th Convocation of KSLU",p:"Member, Guest and Hospitality Committee."}];
-const rev=[{i:"S",h:"Journal of Applied Social Science",p:"SAGE · reviewer since May 2025"},{i:"A",h:"Psychology of Men and Masculinity",p:"American Psychological Association · reviewer since June 2024"},{i:"U",h:"SPECTRUM",p:"Interdisciplinary undergraduate research journal, University of Alberta · reviewer since January 2024"}];
+$('#mss').innerHTML=arr(R.in_progress).map(m=>`<article class="ms rv"><span class="chip${/review/i.test(m.status||'')?' b':''}">${esc(m.status)}</span><h3>${esc(m.title)}</h3><p>${esc(m.text)}</p>${m.coauthors?`<span class="with">${esc(m.coauthors)}</span>`:''}</article>`).join('');
+const P=C.profile||{};
+$('#talks').innerHTML=arr(P.talks&&P.talks.items).map(p=>`<li class="rv"><span class="yr">${esc(p.year)}</span><div><h3>${esc(p.title)}</h3><div class="src">${esc(p.venue)}</div></div></li>`).join('');
+const B=C.books||{};
+$('#shelf').innerHTML=arr(B.items).map(b=>`<div class="book rv" style="background:${esc(b.colour||'#4f6d8a')}"><span class="rib">${esc(B.label)}</span><div><h3>${esc(b.title)}</h3><div class="sub">${esc(b.subtitle)}</div></div><div class="by">${esc(b.footer)}</div></div>`).join('');
+const E=P.education||{};
+$('#g-edu').innerHTML=arr(E.degrees).map(e=>`<div class="stop"><div class="yr2">${esc(e.years)}</div><h3>${esc(e.degree)}</h3><p>${esc(e.institution)}</p>${e.award?`<span class="gold">${esc(e.award)}</span>`:''}</div>`).join('');
+$('#g-edu').style.gridTemplateColumns=`repeat(${Math.max(1,arr(E.degrees).length)},minmax(0,1fr))`;
+$('#g-qual').innerHTML=arr(E.qualifications).map(q=>`<div class="ql"><b>${esc(q.short)}</b><span>${esc(q.detail)}</span></div>`).join('');
 const cols=["#4f6d8a","#a9606a","#5f8a77","#7d6f94","#b08a4a"];
-$('#g-teach').innerHTML=teach.map((c,i)=>card(c,i,cols[i%5])).join('');
-$('#g-serv').innerHTML=serv.map((c,i)=>card(c,i,cols[(i+1)%5])).join('');
-$('#g-rev').innerHTML=rev.map((c,i)=>card(c,i,cols[(i+2)%5])).join('');
-
-const tags=["Social stratification","Caste and identity","Politics of recognition","Discrimination","Sociological social psychology","Gender","Youth and aspiration","Social movements and protest","Development and social change"];
-$('#tags').innerHTML=tags.map(t=>`<li>${t}</li>`).join('');
-const mq=tags.map(t=>`<span>${t}</span>`).join('');
+const card=(c,col)=>`<div class="pc"><div class="ic" style="background:${col}">${esc(c.badge)}</div><h3>${esc(c.title)}</h3><p>${esc(c.text)}</p></div>`;
+$('#g-teach').innerHTML=arr(P.teaching&&P.teaching.courses).map((c,i)=>card(c,cols[i%5])).join('');
+$('#g-serv').innerHTML=arr(P.service&&P.service.roles).map((c,i)=>card(c,cols[(i+1)%5])).join('');
+$('#g-rev').innerHTML=arr(P.peer_review&&P.peer_review.journals).map((c,i)=>card(c,cols[(i+2)%5])).join('');
+const tags=arr(R.specialisations);
+$('#tags').innerHTML=tags.map(t=>`<li>${esc(t)}</li>`).join('');
+const mq=tags.map(t=>`<span>${esc(t)}</span>`).join('');
 $('#marq').innerHTML=mq+mq;
+const ART={video:'<svg class="art" viewBox="0 0 200 200" aria-hidden="true"><circle cx="120" cy="80" r="70" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="6 6"/><circle cx="80" cy="80" r="70" fill="none" stroke="#b5646e" stroke-width="2"/><path d="M92 60v40l32-20z" fill="#b5646e"/></svg>',
+ tests:'<svg class="art" viewBox="0 0 200 200" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="60" y="30" width="110" height="140" rx="10" stroke-dasharray="7 6"/><path d="M82 70l10 10 20-22M82 110l10 10 20-22" /><path d="M124 72h28M124 112h28M124 150h28" stroke-opacity=".6"/></g></svg>',
+ other:'<svg class="art" viewBox="0 0 200 200" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2"><circle cx="110" cy="90" r="60" stroke-dasharray="7 6"/><circle cx="110" cy="90" r="22"/></g></svg>'};
+$('#beyond').innerHTML=arr(C.beyond&&C.beyond.items).map((x,i)=>{const st=ART[x.style]?x.style:'other';return `<article class="pcard ${st==='video'?'yt':st==='tests'?'net':(i%2?'net':'yt')} rv">${ART[st]}<h3>${esc(x.title)}</h3><p>${esc(x.text)}</p>${x.link?`<a href="${esc(x.link)}">${esc(x.link_text||'Visit →')}</a>`:''}</article>`}).join('');
 
 /* ---------- name split ---------- */
 const h1=$('#name');
 h1.innerHTML=h1.textContent.split(' ').map(w=>`<span class="w">${[...w].map(c=>`<span class="c">${c}</span>`).join('')}</span>`).join(' ');
 
 /* ---------- rotating role ---------- */
-const roles=["sociologist","teacher of law students","researcher of caste and recognition","student of youth aspiration","writer of textbooks","YouTuber on philosophy"];
-const rot=$('#rot');
+const roles=arr(C.site.roles).length?arr(C.site.roles):["sociologist"];
+
+const rot=$('#rot');rot.textContent=roles[0];
 if(!reduce){
   let ri=0,ci=roles[0].length,del=true;
   const tick=()=>{
@@ -676,7 +624,7 @@ addEventListener('scroll',onScroll,{passive:true});onScroll();
 
 /* ---------- copy ---------- */
 const btn=$('#copy');
-btn.addEventListener('click',()=>{const done=t=>{btn.textContent=t;setTimeout(()=>btn.textContent='Copy email address',2200)};try{navigator.clipboard.writeText('buddha956380@gmail.com').then(()=>done('Copied ✓'),()=>done('Select the address to copy'))}catch(e){done('Select the address to copy')}});
+btn.addEventListener('click',()=>{const done=t=>{btn.textContent=t;setTimeout(()=>btn.textContent='Copy email address',2200)};try{navigator.clipboard.writeText(L.email||'').then(()=>done('Copied ✓'),()=>done('Select the address to copy'))}catch(e){done('Select the address to copy')}});
 
 
 /* ---------- profile tabs ---------- */
@@ -716,9 +664,9 @@ if(window.gsap&&!reduce){
     g.to('#cloth',{yPercent:12,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
     $$('.stats b[data-count]').forEach(b=>{const n=+b.dataset.count,o={v:0};g.to(o,{v:n,duration:1.4,ease:'power2.out',onUpdate:()=>b.textContent=Math.round(o.v),scrollTrigger:{trigger:b,start:'top 92%',once:true}})});
     $$('.rv-group').forEach(grp=>g.from(grp.querySelectorAll('.rv'),{opacity:0,duration:.7,stagger:.1,ease:'power3.out',scrollTrigger:{trigger:grp,start:'top 88%',once:true}}));
-    $('.rv-solo').forEach(el=>g.from(el,{opacity:0,duration:.6,scrollTrigger:{trigger:el,start:'top 90%',once:true}}));
-    $('.thesis.rv').forEach(el=>g.from(el,{opacity:0,duration:.8,scrollTrigger:{trigger:el,start:'top 88%',once:true}}));
-    $('.sec-head h2,.phead h2').forEach(el=>g.from(el,{opacity:0,duration:.7,scrollTrigger:{trigger:el,start:'top 90%',once:true}}));
+    $$('.rv-solo').forEach(el=>g.from(el,{opacity:0,duration:.6,scrollTrigger:{trigger:el,start:'top 90%',once:true}}));
+    $$('.thesis.rv').forEach(el=>g.from(el,{opacity:0,duration:.8,scrollTrigger:{trigger:el,start:'top 88%',once:true}}));
+    $$('.sec-head h2,.phead h2').forEach(el=>g.from(el,{opacity:0,duration:.7,scrollTrigger:{trigger:el,start:'top 90%',once:true}}));
     $$('#paths').forEach(el=>ScrollTrigger.create({trigger:el,start:'top 85%',once:true,onEnter:()=>{$$('#paths .pth').forEach((p,i)=>{const L=p.getTotalLength();g.fromTo(p,{strokeDasharray:L,strokeDashoffset:L},{strokeDashoffset:0,duration:1.6,delay:i*.07,ease:'power2.out',onComplete:()=>{p.style.strokeDasharray='7 6';g.to(p,{strokeDashoffset:-130,duration:8,repeat:-1,ease:'none'})}})})}}));
   }
 }
