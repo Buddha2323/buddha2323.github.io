@@ -4,10 +4,9 @@
   "greeting": "Namaskar, I am",
   "roles": [
    "sociologist",
-   "teacher of law students",
+   "teacher who helps law students to understand society",
    "researcher of caste and recognition",
    "student of youth aspiration",
-   "writer of textbooks",
    "YouTuber on philosophy"
   ],
   "bio": "I teach sociology at Karnataka State Law University, Hubballi, and I am a doctoral researcher at the Institute for Social and Economic Change, Bengaluru. I study how caste and identity are claimed, recognised and lived; how young people come to want the lives they want; and how publics decide whether a protest is legitimate.",
@@ -320,7 +319,7 @@
   "items": [
    {
     "title": "Paradoxes of Being",
-    "text": "A YouTube channel in Hinglish that starts from questions people ask themselves and works through them with a text, from Bhagat Singh's \"Why I Am an Atheist\" to common myths about philosophical ideas.",
+    "text": "A YouTube channel in Hinglish that starts from questions people ask themselves and works through them. ",
     "link": "",
     "link_text": "",
     "style": "video"
@@ -340,6 +339,6 @@
  },
  "footer": {
   "left": "© 2026 Buddha Dev Biswas",
-  "right": "Hubballi and Bengaluru, Karnataka"
+  "right": "Hubballi, Karnataka"
  }
 }
