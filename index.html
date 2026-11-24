@@ -115,7 +115,7 @@ nav .links a:hover::after,nav .links a.on::after{transform:scaleX(1)}
 .sec-head>div:first-child::before{content:"";position:absolute;top:0;left:0;width:100%;border-top:2px dashed var(--mad)}
 .sec-head h2{margin-bottom:12px}
 .kicker{color:var(--soft);font-size:15.5px;max-width:28ch}
-.sticky{position:sticky;top:90px}
+.sec-head>div.sticky{position:sticky;top:90px;align-self:start}
 
 /* what I do */
 .lanes{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,15em),1fr));gap:18px}
@@ -169,7 +169,7 @@ nav .links a:hover::after,nav .links a.on::after{transform:scaleX(1)}
 .book .sub{font-size:13px;opacity:.85;margin-top:8px;position:relative;line-height:1.35}
 .book .by{font-size:13px;opacity:.9;position:relative}
 .bk1{background:#4f6d8a}.bk2{background:#a9606a}.bk3{background:#5f8a77}.bk4{background:#7d6f94}
-.shelf-note{color:var(--soft);font-size:15px;margin-top:18px}
+.shelf-note{position:relative;color:var(--soft);font-size:15px;margin-top:22px}
 
 /* teaching */
 .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,19em),1fr));gap:28px 48px}
@@ -236,7 +236,7 @@ a.cover:hover,a.cover:focus-visible{transform:translateY(-6px);box-shadow:0 30px
 .cv-foot b{color:var(--jc);font-weight:600;overflow-wrap:anywhere}
 .cv-go{position:absolute;right:12px;bottom:12px;background:var(--jc);color:#fff;font:600 12.5px "DM Sans",system-ui,sans-serif;padding:7px 12px;border-radius:999px;opacity:0;transform:translateY(8px);transition:.3s}
 a.cover:hover .cv-go,a.cover:focus-visible .cv-go{opacity:1;transform:none}
-.cov-note{color:var(--soft);font-size:13.5px;margin-top:14px}
+.cov-note{position:relative;color:var(--soft);font-size:13.5px;margin-top:18px}
 /* books wip */
 .book .rib{position:relative;align-self:flex-start;background:#fffdf8;color:#4a4d5c;font:600 11.5px "DM Sans",system-ui,sans-serif;padding:3px 10px;border-radius:999px;margin-bottom:12px}
 .book>div:first-of-type{flex:1}
@@ -274,8 +274,8 @@ a.cover:hover .cv-go,a.cover:focus-visible .cv-go{opacity:1;transform:none}
 .ql b{flex:none;font-family:Newsreader,Georgia,serif;font-size:18px;color:var(--deep);white-space:nowrap}
 .ql span{font-size:14.5px;color:var(--soft)}
 @media(max-width:760px){.covers{grid-template-columns:minmax(0,1fr)}.cover .cv-t{min-height:0}.road{grid-template-columns:minmax(0,1fr);padding-top:0;padding-left:30px}.road::before{left:10px;right:auto;top:8px;bottom:8px;border-top:0;border-left:3px dashed var(--mad);transform:none}.stop::before{top:24px;left:-29px;margin-left:0}.pintro{grid-template-columns:minmax(0,1fr)}}
-@media(max-width:980px){.shelf{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:860px){.hero .wrap,.contact .wrap,.thesis{grid-template-columns:minmax(0,1fr)}.hero::before{background:color-mix(in srgb,var(--band) 82%,transparent)}.portrait{order:-1;width:min(70%,280px);margin-top:12px}.hero .wrap{min-height:0;padding-bottom:40px}.scrollcue{display:none}.sec-head{grid-template-columns:minmax(0,1fr)}.kicker{max-width:none}.sticky{position:static}.thesis .fig{min-height:200px;order:-1}}
+@media(max-width:980px){.shelf{grid-template-columns:repeat(2,minmax(0,1fr))}.book{aspect-ratio:auto;min-height:230px}}
+@media(max-width:860px){.hero .wrap,.contact .wrap,.thesis{grid-template-columns:minmax(0,1fr)}.hero::before{background:color-mix(in srgb,var(--band) 82%,transparent)}.portrait{order:-1;width:min(70%,280px);margin-top:12px}.hero .wrap{min-height:0;padding-bottom:40px}.scrollcue{display:none}.sec-head{grid-template-columns:minmax(0,1fr)}.kicker{max-width:none}.sec-head>div.sticky{position:relative;top:auto}.thesis .fig{min-height:200px;order:-1}}
 @media(max-width:600px){nav .links{width:100%;overflow-x:auto;flex-wrap:nowrap;padding-bottom:2px}nav .links a{flex:none}.pubs li{grid-template-columns:minmax(0,1fr);gap:2px}.portrait{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}.portrait .frame{width:100%}.portrait .ring{bottom:auto;height:calc(100% - 0px);display:none}.portrait .tag,.portrait .tag2{position:static;max-width:none;font-size:12.5px;margin-top:6px}.lead{text-align:left}.portrait .tag,.portrait .tag2{flex:1 1 0;padding:8px 10px}.shelf{gap:14px}.book{padding:16px 12px 12px 18px}}
 @media(prefers-reduced-motion:reduce){.walker,.walker svg,.walker line{animation:none!important}.walker{transform:translateX(var(--x0))}html{scroll-behavior:auto}.marq .row,.rot b,.scrollcue i{animation:none}.book,.lane,.ms,.btn{transition:none}}
 </style>
